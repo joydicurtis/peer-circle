@@ -1,0 +1,65 @@
+.how-works {
+	color: $white;
+	padding-right: 130px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include breakpoint(medium) {
+		padding-top: 90px;
+		padding-bottom: 90px;		
+	}
+	&:before {
+	    content: ' ';
+	    background: #5da0e7;
+	    width: 10000px;
+	    border-radius: 0 10px 10px 0;
+	    display: block;
+	    position: absolute;
+	    right: 48px;
+	    z-index: -1;
+	    top: 0;
+	    bottom: 0;
+	    box-shadow: 0 0 0 48px #5695db;
+	}
+	&:after {
+		content: ' ';
+		width: 164px;
+		height: 164px;
+		border-radius: 50%;
+		background: #fff;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		margin-top: -82px;
+		right: -82px;
+		box-shadow: 0 0 0 48px #5695db;
+		z-index: -1;
+	}
+}
+.how-text {
+	margin: 130px 0 0;
+	color: $blue-dark;
+}
+.how-text-num {
+	font-size: 60px;
+	font-family: $font-second;
+	line-height: 1;
+	margin-bottom: 30px;
+	&:before {
+		content: ' ';
+	    display: inline-block;
+	    width: 105px;
+	    height: 105px;
+	    border-radius: 50%;
+	    background: #f4f5f7;
+	    position: absolute;
+	    z-index: -1;
+	    left: -30px;
+	}
+}
+.how-text-title {
+	font-family: $font-second;
+	color: $blue-dark;
+	font-size: $fontSize-larger;
+	line-height: 1;
+	margin-bottom: 30px;
+}

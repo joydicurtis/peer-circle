@@ -1,0 +1,86 @@
+.benefits {
+	@include breakpoint(medium) {
+		background: $gray-bg;
+		padding: 35px 0;
+	}
+	@include breakpoint(large) {
+		background: none;
+		padding: 0;
+	}
+}
+.benefit {
+	position: relative;
+	background: $white;
+	border-radius: 10px;
+	padding: 20px 30px;
+	height: 124px;
+	margin-bottom: 10px;
+	transition: all .3s ease-in-out;
+	z-index: 0;
+	@include breakpoint(medium) {
+		box-shadow: 0px 3px 15px 0 #e3e4e9;
+		height: 160px;
+	}
+	&:hover,
+	&:focus {
+		box-shadow: 0px 10px 40px 0 #3987e4;
+		z-index: 100;
+		.benefit__title {
+			color: $color-primary-hover;
+		}
+		.benefit__text {
+			color: $color-primary-hover;
+		}
+	}
+}
+.benefit_first {
+	@include breakpoint(medium) {
+		background:url("../images/benefit-1.png") no-repeat top right;
+	}
+}
+.benefit_second {
+	@include breakpoint(medium) {
+		background:url("../images/benefit-2.png") no-repeat top right;
+	}
+}
+.benefit_third {
+	@include breakpoint(medium) {
+		background:url("../images/benefit-3.png") no-repeat top right;
+	}
+}
+.benefit_forth {
+	@include breakpoint(medium) {
+		background:url("../images/benefit-4.png") no-repeat top right;
+	}
+}
+.benefit_fifth {
+	@include breakpoint(medium) {
+		background:url("../images/benefit-5.png") no-repeat top right;
+	}
+}
+.benefit_sixth {
+	text-align: center;
+	.benefit__title {
+		padding: 40px 0;
+		color: $color-primary;
+		@include breakpoint(medium) {
+			padding: 26px 0;
+		}
+	}
+}
+.benefit__title {
+	font-family: $font-second;
+	color: $blue-dark;
+	font-size: $fontSize-larger;
+	line-height: 1.4;
+	margin-bottom: 15px;
+}
+.benefit__text {
+	display: none;
+	color: $color-secondary;
+	line-height: 1.4;
+	font-size: $fontSize-small;
+	@include breakpoint(medium) {
+		display: block;
+	}
+}

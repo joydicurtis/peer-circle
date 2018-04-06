@@ -1,0 +1,93 @@
+.teaser {
+	position: relative;
+	@include breakpoint(medium) {
+		background: url("../images/teaser.png") no-repeat;
+		width: 643px;
+		margin: 0 auto;
+		padding: 200px 0;
+	}
+	@include breakpoint(large) {
+		background: url("../images/teaser-1.png") top right no-repeat;
+		width: 100%;
+		padding: 50px 0 0;
+	}
+	@include breakpoint(xlarge) {
+		width: 100%;
+		padding: 100px 0;
+	}
+}
+.teaser__title {
+	font-family: $font-second;
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 5px;
+	line-height: 1;
+	@include breakpoint(large) {
+		font-size: 100px;
+		text-align: left;
+	}
+}
+.teaser__text {
+	font-size: $fontSize-small;
+	font-family: $font-second;
+	text-align: center;
+	margin-bottom: 70px;
+	@include breakpoint(medium) {
+		margin-bottom: 30px;
+	}
+	@include breakpoint(large) {
+		text-align: left;
+	}
+}
+.teaser-input {
+	position: relative;
+	margin-bottom: 190px;
+	input {
+		border-radius: 36px;
+		background: white;
+		border: none;
+		padding: 33px 40px 37px;
+		&::placeholder {
+			text-transform: uppercase;
+			font-size: $fontSize-xxsmall;
+			font-family: $font-second;
+			letter-spacing: 1px;
+    	}
+	}
+	.btn {
+		width: 100%;
+		@include breakpoint(medium) {
+			width: auto;
+			position: absolute;
+			margin: 0;
+			top: 6px;
+			right: 6px;
+		}
+	}
+}
+.scrolldown-item {
+	display: none;
+	@include breakpoint(large) {
+		display: block;
+		position: absolute;
+		width: 116px;
+		height: 116px;
+		border-radius: 50%;
+		left: 50%;
+		margin-left: -58px;
+		bottom: -58px;
+		background: $gray-bg;
+	}
+	&.scrolldown-item_white {
+		background: $white;
+	}
+	&:before {
+		content: ' ';
+		display: block;
+		width: 85px;
+		height: 85px;
+		border: solid 1px $gray-border;
+		border-radius: 50%;
+		margin: 16px;
+	}
+}
