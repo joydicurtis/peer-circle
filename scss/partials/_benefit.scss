@@ -59,9 +59,11 @@
 	}
 }
 .benefit_sixth {
-	text-align: center;
+	@include breakpoint(medium) {
+		text-align: center;
+	}
 	.benefit__title {
-		padding: 40px 0;
+		padding: 12px 0;
 		color: $color-primary;
 		@include breakpoint(medium) {
 			padding: 26px 0;

@@ -14,8 +14,8 @@ $content-gutters: 25px;
 }
 .siteSection {
     position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 .siteSection--noPad {
     padding-top: 0;
@@ -33,11 +33,24 @@ $content-gutters: 25px;
     }
     @include breakpoint(large) {
         background-position: left bottom;
+        padding: 60px 0 120px;
+    }
+    @include breakpoint(xlarge) {
+        padding: 60px 0 0;
     }
 }
 .siteSection--benefits {
     background: url("../images/benefits.png") center 60px no-repeat;
     background-size: 100%;
+    @include breakpoint(medium) {
+        background-position: center top;
+    }
+    @include breakpoint(large) {
+        padding: 230px 0 70px;
+    }
+    @include breakpoint(xxlarge) {
+        padding: 330px 0 70px;
+    }
 }
 .siteSection--gray {
     background: $gray-bg;

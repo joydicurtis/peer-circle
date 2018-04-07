@@ -4,7 +4,10 @@
 	color: #eb811e;
 	input {
 		background:none;
-		border-bottom: solid 2px #eb811e;;
+		border-bottom: solid 2px #eb811e;
+		&::placeholder {
+			display:none;
+    	}
 	}
 	label {
 		font-weight: $fontWeight-normal;
@@ -17,7 +20,7 @@
 	}
 }
 .footer-contact {
-	background: $color-secondary;
+	background: url('../images/bg.png') $color-secondary top right no-repeat;;
 	padding: 60px 0;
 	color: $white;
 	a {

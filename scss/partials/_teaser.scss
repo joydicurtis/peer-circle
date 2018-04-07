@@ -1,10 +1,9 @@
 .teaser {
 	position: relative;
 	@include breakpoint(medium) {
-		background: url("../images/teaser.png") no-repeat;
-		width: 643px;
+		background: url("../images/teaser.png") top center no-repeat;
 		margin: 0 auto;
-		padding: 200px 0;
+		padding: 200px 0 0;
 	}
 	@include breakpoint(large) {
 		background: url("../images/teaser-1.png") top right no-repeat;
@@ -41,7 +40,7 @@
 }
 .teaser-input {
 	position: relative;
-	margin-bottom: 190px;
+	margin-bottom: 275px;
 	input {
 		border-radius: 36px;
 		background: white;
@@ -66,18 +65,16 @@
 	}
 }
 .scrolldown-item {
-	display: none;
-	@include breakpoint(large) {
-		display: block;
-		position: absolute;
-		width: 116px;
-		height: 116px;
-		border-radius: 50%;
-		left: 50%;
-		margin-left: -58px;
-		bottom: -58px;
-		background: $gray-bg;
-	}
+	display: block;
+	position: absolute;
+	width: 116px;
+	height: 116px;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -58px;
+	bottom: -58px;
+	background: $gray-bg;
+	z-index: 100;
 	&.scrolldown-item_white {
 		background: $white;
 	}
@@ -89,5 +86,8 @@
 		border: solid 1px $gray-border;
 		border-radius: 50%;
 		margin: 16px;
+		background: url('../images/mouse.svg') no-repeat;
+		background-size: 30px;
+		background-position: center;
 	}
 }
