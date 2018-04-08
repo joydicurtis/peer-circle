@@ -1,12 +1,11 @@
 .referral {
+	position: relative;
 	background: url("../images/referral.png") center no-repeat;
-	padding: 275px 0;
-	background-size: 100%;
+	padding: 360px 0;
 	@include breakpoint(large) {
 		background: url("../images/referral-1.png") center no-repeat;
 		padding: 385px 0;
 		min-height: 742px;
-		background-size: 100%;
 	}
 }
 .referral-title {
@@ -29,4 +28,70 @@
 }
 .referral-action {
 	text-align: center;
+}
+.referral-item {
+    background: $white;
+    border-radius: 50%;
+    padding: 35px;
+    position: absolute;
+    text-align: center;
+    box-shadow: 0px 19px 57px 0 rgba(65, 74, 87, 0.15);
+    font-size: $fontSize-small;
+    &.referral-item__link {
+    	top: 0;
+    	left: 50%;
+    	margin-left: -160px;
+    }
+    &.referral-item__credits {
+    	bottom: 60px;
+    	left: 5%;
+    	@include breakpoint(xlarge) {
+    		left: 15%;
+    	}
+    }
+    &.referral-item__referral {
+    	bottom: 60px;
+    	right: 5%;
+    	@include breakpoint(xlarge) {
+    		right: 15%;
+    	}
+    }
+}
+.referral-item__link {
+	width: 320px;
+    height: 320px;
+	.referral-item__img {
+		background: url('../images/link.svg') no-repeat center;
+		width: 47px;
+		height: 47px;
+		margin: 0 auto 20px;
+	}
+}
+.referral-item__credits {
+	width: 220px;
+    height: 220px;
+    @include breakpoint(medium) {
+    	width: 284px;
+    	height: 284px;
+    }
+	.referral-item__img {
+		background: url('../images/credits.svg') no-repeat center;
+		width: 54px;
+		height: 48px;
+		margin: 0 auto 20px;
+	}
+}
+.referral-item__referral {
+	width: 220px;
+    height: 220px;
+    @include breakpoint(medium) {
+    	width: 284px;
+    	height: 284px;
+    }
+	.referral-item__img {
+		background: url('../images/referral.svg') no-repeat center;
+		width: 48px;
+		height: 47px;
+		margin: 0 auto 20px;
+	}
 }

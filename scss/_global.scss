@@ -1,4 +1,4 @@
-*,
+s*,
 *:before,
 *:after {
     box-sizing: border-box;
@@ -43,11 +43,13 @@ h1 {
     margin: 0 0 20px;
     font-size: $fontSize-largest;
     line-height: $lineHeight-stightest;
+    font-family: $font-second;
 }
 h2 {
     margin: 0 0 16px;
     font-size: $fontSize-larger;
     line-height: $lineHeight-tightest;
+    font-family: $font-second;
 }
 h3 {
     margin: 0 0 14px;

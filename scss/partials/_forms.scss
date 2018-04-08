@@ -45,11 +45,13 @@ input[type="submit"],
     text-transform: uppercase;
     border-radius: 29px;
     &:hover,
-    &:active {
+    &:active,
+    &:active:hover {
         cursor: pointer;
         background: $color-primary-hover;
         border: 2px solid $color-primary-hover;
         box-shadow: none;
+        color: $blue-dark;
     }
 }
 .btn--fullWidth {

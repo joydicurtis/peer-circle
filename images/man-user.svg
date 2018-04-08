@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 213 280" style="enable-background:new 0 0 213 280;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{clip-path:url(#SVGID_4_);}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="0.1" y="0" width="212.9" height="280"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<defs>
+			<rect id="SVGID_3_" width="213" height="280"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<ellipse class="st1" cx="106.5" cy="68.5" rx="56.4" ry="68.5"/>
+		<path class="st1" d="M212.8,238.7c-1-65.9-9.6-84.6-75.5-96.5c0,0-9.3,11.8-30.9,11.8c-21.6,0-30.9-11.8-30.9-11.8
+			c-65.1,11.8-74.2,30.2-75.4,94.4c-0.1,5.2-0.1,5.5-0.2,4.9c0,1.1,0,3.2,0,6.9c0,0,15.7,31.6,106.5,31.6
+			c90.8,0,106.5-31.6,106.5-31.6c0-2.4,0-4,0-5.1C212.9,243.7,212.9,242.9,212.8,238.7z"/>
+	</g>
+</g>
+</svg>
