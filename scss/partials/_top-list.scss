@@ -8,6 +8,48 @@
 	max-width: 330px;
 	margin: 40px auto 10px;
 }
+.top-list-item_videohelper {
+	background: url('../images/videohelper-bg.png') $white no-repeat;
+	max-width: none;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin-bottom: 30px;
+			text-align: left;
+			a {
+				font-weight: $fontWeight-bold;
+				font-size: $fontSize-small;
+				color: $blue-dark;
+			}
+		}
+	}
+}
+.top-list__play {
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: $color-secondary;
+  cursor: pointer;
+  box-shadow: 0px 4px 5px 0 rgba(57, 135, 228, 0.52);
+  border-radius: 50%;
+  margin-top: 90px;
+  @include breakpoint(medium) {
+  	margin-top: 75px;
+  }
+  span {
+    margin: 0 auto;
+    display: block;
+    top: 35%;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 14px solid $white;
+  }
+}
 .top-list-img {
 	margin: 0 auto;
 	width: 85px;

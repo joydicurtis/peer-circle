@@ -8,6 +8,13 @@
 		min-height: 742px;
 	}
 }
+.referral-letsget {
+	padding: 135px 0;
+	@include breakpoint(large) {
+		background: url("../images/referral-2.png") center no-repeat;
+		padding: 315px 0;
+	}
+}
 .referral-title {
 	text-align: center;
 	color: $white; 
