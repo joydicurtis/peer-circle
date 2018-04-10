@@ -39,6 +39,11 @@ $content-gutters: 25px;
         padding: 60px 0 0;
     }
 }
+.siteSection--teaser_padded {
+    @include breakpoint(xlarge) {
+        padding: 120px 0;
+    } 
+}
 .siteSection--benefits {
     background: url("../images/benefits.png") center 60px no-repeat;
     background-size: 100%;

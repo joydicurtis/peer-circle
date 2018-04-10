@@ -1,0 +1,28 @@
+.breadcrumbs {
+	margin-bottom: 60px;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			font-size: $fontSize-small;
+			color: $gray-text;
+			&:after {
+				content: ' ';
+				display: inline-block;
+				width: 0; 
+				height: 0; 
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
+				border-left: 4px solid $gray-text;
+				margin: 0 15px;
+			}
+			&:last-child {
+				&:after {
+					content: none;
+				}
+			}
+		}
+	}
+}
