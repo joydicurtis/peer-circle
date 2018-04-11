@@ -41,6 +41,24 @@
         }
       });
     }
-
+    $(document).ready(function() {
+        $('.js-select2-multiple').select2();
+        $('.js-select2').select2();
+    });
+    $(document).ready(function() {
+        $("#range").ionRangeSlider({
+            hide_min_max: true,
+            keyboard: true,
+            step: 1,
+            grid: true,
+            hide_min_max: true,
+            hide_from_to: true,
+            values: [
+                "$0", "$70.000",
+                "$250.000", "$475.000",
+                "$900.000", "$1.700.000"
+            ]
+        });
+    });
   });
 })();

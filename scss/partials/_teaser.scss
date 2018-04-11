@@ -11,8 +11,11 @@
 		padding: 50px 0 0;
 	}
 	@include breakpoint(xlarge) {
-		width: 100%;
 		padding: 100px 0;
+	}
+	@include breakpoint(xlarge) {
+		max-width: 1440px;
+		margin: 0 auto;
 	}
 }
 .teaser__title {
@@ -75,6 +78,9 @@
 	bottom: -58px;
 	background: $gray-bg;
 	z-index: 100;
+	@include breakpoint(medium) {
+		display: none;
+	}
 	&.scrolldown-item_white {
 		background: $white;
 	}

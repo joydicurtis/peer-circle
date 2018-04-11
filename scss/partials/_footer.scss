@@ -8,6 +8,9 @@
 		&::placeholder {
 			display:none;
     	}
+    	&:focus {
+    		outline: none;
+    	}
 	}
 	label {
 		font-weight: $fontWeight-normal;
