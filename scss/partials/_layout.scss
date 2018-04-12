@@ -60,6 +60,12 @@ $content-gutters: 25px;
 .siteSection--gray {
     background: $gray-bg;
 }
+.siteSection--bg {
+    @include breakpoint(xlarge) {
+        background: url("../images/bg-1.png") $gray-bg no-repeat;
+        background-position: top right;
+    }
+}
 .siteSection--blue {
     background:$color-secondary;
     color: $white;
@@ -92,4 +98,8 @@ $sidebar-width: 300px;
         margin-left: -$sidebar-width;
         left: $sidebar-width;
     }
+}
+.container--small {
+    max-width: 670px;
+    margin: 0 auto;
 }

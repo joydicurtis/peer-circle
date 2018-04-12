@@ -1,6 +1,15 @@
 .header {
 	padding: 13px 0;
 	box-shadow: 0 0 5px rgba(0,0,0,.2);
+	.container {
+		width: auto;
+		@include breakpoint(large) {
+			width: 960px;
+		}
+		@include breakpoint(xlarge) {
+			width: 1160px;
+		}
+	}
 	.btn {
 		margin: 5px 0;
 		@include breakpoint(large) {
@@ -20,6 +29,7 @@
 	right: 15px;
 	@include breakpoint(medium) {
 		float: none;
+		left: 15px;
 	}
 	@include breakpoint(large) {
 		width: auto;
@@ -29,6 +39,18 @@
 	position: relative;
 	@include breakpoint(medium) {
 		margin: 12px 0;
+	}
+	&.header-menu {
+		position: absolute;
+		width: 100%;
+		@include breakpoint(large) {
+			position: relative;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		    width: 33.33333333%;
+		    margin-left: 25%;
+		    float: left;
+		}
 	}
 	&.is-open {
         .header-nav-mobButton {
@@ -84,10 +106,13 @@
    		background:	$white;
 	    width: 100%;
     	z-index: 0;
+    	top: 13px;
     	left: 0;
     	right: 0;
-    	top: 53px;
     	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    	@include breakpoint(medium) {
+    		top: 71px;
+    	}
     	@include breakpoint(large) {
     		position: relative;
 			visibility: visible;
@@ -98,29 +123,56 @@
     	}
     	li {
     		text-align: center;
-    		padding: 5px 0;
     		@include breakpoint(medium) {
-    			padding: 6px 0;
-    			margin-right: 20px;
     			&:last-child {
     				margin-right: 0;
     			}
-    			&:nth-child(4),
-    			&:nth-child(5) {
+    			&:nth-child(1),
+    			&:nth-child(5),
+    			&:nth-child(6) {
     				display: none;
     			}
+
     		}
     		@include breakpoint(large) {
     			display: inline-block;
+    			margin-right: 20px;
     		}
     		@include breakpoint(xlarge) {
     			margin-right: 40px;
     		}
+		    &:nth-child(6) {
+				border-top: solid 1px $gray-border;
+			}
+			&:nth-child(1),
+			&:nth-child(6) {
+				a {
+    				color: $blue-dark;
+    			}
+    		}
     		a {
+    			display: block;
+    			padding: 10px 0;
     			color: #1c385f;
     			font-family: $font-second;
     			font-size: $fontSize-xsmall;
     			text-transform: uppercase;
+    			color: $gray-text;
+    			@include breakpoint(large) {
+    				color: $blue-dark;
+    			}
+  				&:hover,
+				&:focus {
+					text-decoration: none;
+					background: $color-secondary;
+					color: $white;
+					box-shadow: 0px 3px 15px 0 #3987e4;
+					@include breakpoint(large) { 
+						background: none;
+						color: $blue-dark;
+						box-shadow: none;
+					}
+				}
     		}
     	}
    	}
@@ -195,7 +247,9 @@
 		}
 	}
 }
-
+.header-action {
+	text-align: right;
+}
 .header-wizard {
 	background: $color-secondary;
 }
@@ -241,6 +295,17 @@
 			font-size: $fontSize-xsmall;
 			&.active {
 				color: $white;
+			}
+			&.done {
+				color: $white;
+				&:before {
+					background: $white;
+					content: '✓';
+				    color: $green;
+				    text-align: center;
+				    font-weight: bold;
+    				font-size: 20px;
+				}
 			}
 			&:before {
 				content: ' ';

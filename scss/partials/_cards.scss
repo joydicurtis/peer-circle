@@ -1,0 +1,93 @@
+.card-container {
+	max-width: 670px;
+	margin: 0 auto;
+	padding: 0 15px;
+	@include breakpoint(medium) {
+		padding: 0;
+	}
+}
+.card-container-item {
+	position: relative;
+	label {
+		display: block;
+	    background: url('../images/bg-small-1.png') $gray-bg no-repeat;
+	    border: solid 15px $white;
+	    box-shadow: none;
+	    border-radius: 10px;
+	    width: 100%;
+	    height: 200px;
+	    position: relative;
+	    transition: all .3s ease-in-out;
+	    font-size: $fontSize-larger;
+	    font-family: $font-second;
+	    padding: 65px 0;
+	    text-align: center;
+	    color: $gray-text;
+	    &:before,
+	    &:after {
+			width: 42px;
+		    height: 84px;
+		    display: inline-block;
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -42px;
+		    z-index: 10;
+		    border: 15px solid $white;
+		    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+		    background: $gray-bg;
+		    border-right: none;
+		    transition: all .3s ease-in-out;
+	    }
+	    &:before {
+	    	content: ' ';
+	    	left: -15px;
+		    transform: rotate(180deg);
+	    }
+	    &:after {
+	    	content: ' ';
+	    	right: -15px;
+	    }
+	}
+	.card-container__checkbox {
+		position: absolute;
+    	top: 40px;
+    	z-index: 10;
+    	background: url('../images/unchecked.png') no-repeat;
+    	width: 21px;
+    	height: 21px;
+    	display: inline-block;
+    	left: 50%;
+    	margin-left: -10px;
+	}
+	input[type=radio] {
+	    &:checked {
+	    	+ label {
+		      	background: url('../images/bg-small.png') $color-secondary no-repeat;
+		    	border: solid 15px #5695db;
+		    	box-shadow: 0 19px 57px 0 rgba(65, 74, 87, 0.15);
+		    	color: $white;
+		    	&:after,
+		    	&:before {
+		    		content: ' ';
+				    border: 15px solid #5695db;
+				    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+				    background: $gray-bg;
+				    border-right: none;
+			    }
+			    + .card-container__checkbox {
+		    		background: url('../images/checked.png') no-repeat;
+		    	}
+		    }
+	    }
+	}
+	input {
+		display: none;
+	}
+	img {
+		display: block;
+	    position: absolute;
+	    bottom: 30px;
+	    left: 50%;
+	    margin-left: -80px;
+	}
+}
