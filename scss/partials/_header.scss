@@ -123,6 +123,18 @@
     	}
     	li {
     		text-align: center;
+			&:nth-child(1) {
+				a {
+					&:before {
+						content: ' ';
+						display: inline-block;
+						width: 14px;
+						height: 14px;
+						background: url('../images/phone.svg') no-repeat;
+						margin-right: 10px;
+					}
+				}
+			}
     		@include breakpoint(medium) {
     			&:last-child {
     				margin-right: 0;
@@ -244,6 +256,14 @@
 		a {
 			color: $blue-dark;
 			font-family: $font-second;
+			&:before {
+				content: ' ';
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				background: url('../images/phone.svg') no-repeat;
+				margin-right: 10px;
+			}
 		}
 	}
 }
@@ -252,6 +272,7 @@
 }
 .header-wizard {
 	background: $color-secondary;
+	padding: 30px 0;
 }
 .header-wizard-title {
 	display: inline-block;
@@ -295,16 +316,21 @@
 			font-size: $fontSize-xsmall;
 			&.active {
 				color: $white;
+				&:before {
+					border: solid 1px $white;
+				}
 			}
 			&.done {
 				color: $white;
 				&:before {
-					background: $white;
-					content: '✓';
+					content: ' ';
+					background: url('../images/tick.svg') $white center no-repeat;
+					background-size: 16px;
 				    color: $green;
 				    text-align: center;
 				    font-weight: bold;
     				font-size: 20px;
+    				border: solid 1px $white;
 				}
 			}
 			&:before {
