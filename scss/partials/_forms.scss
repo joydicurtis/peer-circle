@@ -51,7 +51,7 @@ input[type="submit"],
         background: $color-primary-hover;
         border: 2px solid $color-primary-hover;
         box-shadow: none;
-        color: $blue-dark;
+        color: $gray-text;
     }
 }
 .btn--fullWidth {
@@ -114,9 +114,12 @@ input[type="submit"],
             width: auto;
         }
         .form-tip {
-            position: relative;
-            top: 30px;
             font-size: $fontSize-small;
+            color: $gray-text;
+            @include breakpoint(medium) {
+                position: relative;
+                top: 30px;
+            }
         }
         &.form-item--half {
                 float: left;
@@ -139,7 +142,7 @@ input[type="submit"],
     textarea,
     select {
         width: 100%;
-        padding: 15px 10px 16px;
+        padding: 15px 25px 16px;
         font-family: $font-base;
         font-size: $fontSize-small;
         line-height: $lineHeight-base;
@@ -151,10 +154,20 @@ input[type="submit"],
         color: $blue-dark;
         font-weight: $fontWeight-bold;
         &:focus {
+            outline: none;
+             box-shadow: 0 2px 0 0 $color-secondary;
+        }
+        &[disabled] {
+            background: #fbfbfd;
+            box-shadow: 0 2px 0 0 #e3e4e9;
+        }
+        &.error {
+             box-shadow: 0 2px 0 0 $red;
         }
         &::placeholder {
             color: $blue-dark;
             font-weight: $fontWeight-bold;
+            color: $gray-text;
         }
     }
 }
@@ -215,9 +228,18 @@ i {
     box-shadow: none;
 }
 .select2-container--default {
+    display: block;
+    width: 100%!important;
+    input.select2-search__field {
+        &[type="search"] {
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
     .select2-selection--multiple {
         width: 100%;
-        padding: 9px 10px 10px;
+        padding: 9px 17px 10px;
         font-family: $font-base;
         font-size: $fontSize-small;
         line-height: $lineHeight-base;
@@ -245,7 +267,7 @@ i {
     }
     .select2-selection--single {
         width: 100%;
-        padding: 9px 10px 10px;
+        padding: 9px 17px 10px;
         font-family: $font-base;
         font-size: $fontSize-small;
         line-height: $lineHeight-base;
@@ -256,6 +278,10 @@ i {
         -webkit-appearance: none;
         font-weight: $fontWeight-bold;
         height: auto;
+        &:focus {
+            outline: none;
+            box-shadow: 0 2px 0 0 $color-secondary;
+        }
         .select2-selection__arrow {
             height: auto;
             top: 50%;
@@ -268,9 +294,14 @@ i {
         .select2-selection--multiple {
             border: none;
             background: $gray-bg;
+            box-shadow: 0 2px 0 0 $color-secondary;
             .select2-results__option {
                 &:after {
-                    content: 'a';
+                    content: ' ';
+                    display: inline-block;
+                    background: url('../images/success-icon.png') no-repeat;
+                    width: 23px;
+                    height: 24px;
                     position: absolute;
                     right: 10px;
                 }
@@ -293,8 +324,24 @@ i {
         border: solid 1px $gray-table-border; 
     }
 }
+.irs-with-grid {
+    width: 90%;
+    &:after {
+        content: ' ';
+        background: $gray-bg;
+        height: 12px;
+        width: 300px;
+        display: inline-block;
+        position: absolute;
+        top: 25px;
+        right: -10%;
+        z-index: 0;
+        border-radius: 6px;
+    }
+}
 .irs-line {
     height: 12px;
+    z-index: 1;
 }
 .irs-line-mid {
     background: $gray-bg;
@@ -313,11 +360,13 @@ i {
 .irs-bar {
     background: $color-secondary;
     height: 12px;
+    z-index: 2;
 } 
 .irs-bar-edge {
     background: $color-secondary;
     height: 12px;
     border-radius: 6px;
+    z-index: 1;
 }
 .irs-slider {
     width: 16px;

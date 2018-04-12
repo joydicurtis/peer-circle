@@ -1,11 +1,23 @@
 .referral {
 	position: relative;
-	background: url("../images/referral.png") center no-repeat;
+	background: url("../images/circle_540.svg") center no-repeat;
+	background-size: 540px;
 	padding: 360px 0;
+	@include breakpoint(medium) {
+		background-size: 690px;
+	}
 	@include breakpoint(large) {
-		background: url("../images/referral-1.png") center no-repeat;
+		background: url("../images/circle_720.svg") center no-repeat;
 		padding: 385px 0;
 		min-height: 742px;
+		background-size: 690px;
+	}
+	@include breakpoint(xlarge) {
+		background: url("../images/circle.svg") center no-repeat;
+		background-size: 1100px;
+	}
+	@include breakpoint(xxlarge) {
+		background-size: 1440px;
 	}
 }
 .referral-letsget {
