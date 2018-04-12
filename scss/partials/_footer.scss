@@ -1,12 +1,15 @@
 .footer-search {
 	background: $color-primary;
 	padding: 45px 0;
-	color: #eb811e;
+	color: $blue-dark;
+	font-weight: $fontWeight-bold;
 	input {
 		background:none;
 		border-bottom: solid 2px #eb811e;
+		color: $blue-dark;
 		&::placeholder {
 			display:none;
+			font-weight: $fontWeight-bold;
     	}
     	&:focus {
     		outline: none;

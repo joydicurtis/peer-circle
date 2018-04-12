@@ -1,0 +1,107 @@
+<section class="siteSection siteSection--gray siteSection--noPad">
+    <div class="container">
+        <?php require('blocks/partials/breadcrumbs.html'); ?>
+    </div>
+</section>
+<section class="siteSection siteSection--gray siteSection--bg">
+    <div class="container">
+        <h2 class="u-text--center">Choose your payment method</h2>
+        <div class="subheader u-text--center">Choose your payment method</div>
+        <div class="form-container form-container--transparent">
+            <div class="form">
+                <div class="card-container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card-container-item">
+                                <input type="radio" id="mastercard" name="card-choice">
+                                
+                                <label for="mastercard">Credit card</label>
+                                <div class="card-container__checkbox"></div>
+                                <img src="images/visa.png">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card-container-item">
+                                <input type="radio" id="paypal" name="card-choice">
+
+                                <label for="paypal">PayPal</label>
+                                <div class="card-container__checkbox"></div>
+                                <img src="images/paypal.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="form">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label for="cname">Card number</label>
+                            <input type="text" id="cname" name="cname" placeholder="41551 3283 657 9567">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <label for="cname">Expiration date</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-item">
+                            <select class="js-select2-multiple" name="states[]" multiple="multiple">
+                              <option value="first">March</option>
+                              <option value="second">April</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-item">
+                            <select class="js-select2-multiple" name="states[]" multiple="multiple">
+                              <option value="first">2028</option>
+                              <option value="second">2029</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label for="cname">Security code</label>
+                            <input type="text" id="cname" name="cname" placeholder="39756025">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="clearfix">
+                <div class="pull-left"><a href="#" class="btn">back</a></div>
+                <div class="pull-right"><a href="#" class="btn btn-primary">purchase product</a></div>
+                <div class="clearfix">
+                    <div class="form-tooltip pull-right">
+                        By clicking the button you agree to the <a href="#">Terms and Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="details-item clearfix">
+                <div class="details-item__name">
+                    <img src="images/bitcoin.png">Ethereum circle
+                </div>
+                <div class="details-item__text">
+                    On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and dislike to righteous indignation.
+                </div>
+            </div>
+            <div class="details-item clearfix">
+                <div class="details-item__label">Category</div>
+                <div class="details-item__content">General liability</div>
+            </div>
+            <div class="details-item clearfix">
+                <div class="details-item__label">Subcategory</div>
+                <div class="details-item__content">General liability subcategory</div>
+            </div>
+            <div class="details-item clearfix">
+                <div class="details-item__label">Price </div>
+                <div class="details-item__content"><strong>$294</strong></div>
+            </div>
+        </div>
+    </div>
+</section>

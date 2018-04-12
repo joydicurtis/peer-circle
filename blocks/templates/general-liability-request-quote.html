@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en-US">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+        <title></title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/application.css">
+    </head>
+<body>
+<header class="header header-wizard">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-2">
+                <div class="header-logo-wizard">
+                    <img src="../../images/logo-white-1.png">
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-9 col-md-10">
+                <div class="header-wizard-step">
+                    step 1 of 4
+                </div>
+                <div class="header-wizard-title">
+                    Professional liability
+                </div>
+                <div class="header-wizard-steplist">
+                    <ul>
+                        <li class="done">Request quote</li>
+                        <li class="active">Choosing product</li>
+                        <li>Policy details</li>
+                        <li>Payment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="siteSection siteSection--gray siteSection--noPad">
+    <div class="container">
+        <?php require('blocks/partials/breadcrumbs.html'); ?>
+    </div>
+</section>
+<section class="siteSection siteSection--gray siteSection--bg">
+    <div class="container">
+        <h2 class="u-text--center">Request quote</h2>
+        <div class="form-container">
+            <div class="form">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label for="cname">Company name</label>
+                            <input type="text" id="cname" name="cname" placeholder="Company name">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label>Business industry</label>
+                            <select class="js-select2-multiple" name="states[]" multiple="multiple">
+                              <option value="first">Associations, Non-profits and Charities insurance</option>
+                              <option value="second">Associations, Non-profits and Charities insurance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label>Business adress</label>
+                            <select class="js-select2" name="state">
+                              <option value="first">Ontario, 354 street, 45, office 34</option>
+                              <option value="second">Ontario, 354 street, 45, office 34</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <div class="form-item">
+                            <label>Business number</label>
+                            <select>
+                                <option>ZXEO4986</option>
+                                <option>ZXEO4986</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="form-item">
+                            <label>Years of operation</label>
+                            <select>
+                                <option>8</option>
+                                <option>8</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <div class="form-item">
+                            <label>Employees</label>
+                            <select>
+                                <option>8</option>
+                                <option>8</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label for="cemail">What is your projected revenue over the coming 12 month?</label>
+                            <input type="text" id="range" value="" name="range" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="form">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label for="cname">Owner  first name</label>
+                            <input type="text" id="cname" name="cname" placeholder="John">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-item">
+                            <label for="cname">Owner last name</label>
+                            <input type="text" id="cname" name="cname" placeholder="Dou">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-item form-item--half">
+                            <label for="cname">Phone number</label>
+                            <input type="text" id="cname" name="cname" placeholder="800-950-1450">
+                        </div>
+                        <div class="form-item form-item--half">
+                            <div class="form-tip">If we have questions according to your quote</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-item form-item--half">
+                            <label for="cname">E-mail</label>
+                            <input type="email" id="cname" name="cname" placeholder="John****@gmail.com">
+                        </div>
+                        <div class="form-item form-item--half">
+                            <div class="form-tip">If we have questions according to your quote</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="form">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="toggle-switch">
+                          <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+                          <label for="sex_f" class="register-switch-label">No pending  law suits</label>
+                          <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+                          <label for="sex_m" class="register-switch-label">Pending law suits</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <a href="#" class="btn btn-default btn--small">upload pdf</a>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-uploaded clearfix">
+                            <div class="form-uploaded__img">
+                                <img src="../../images/pdf-icon.svg" alt>
+                            </div>
+                            <div class="form-uploaded-content">
+                                <div class="form-uploaded__item">
+                                    “Document pending lawsuits”
+                                </div>
+                                <div class="form-uploaded__size">
+                                    617.45 kb
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-uploaded">
+                            <div class="form-uploaded__img">
+                                <img src="../../images/pdf-icon.svg" alt>
+                            </div>
+                            <div class="form-uploaded-content">
+                                <div class="form-uploaded__item">
+                                    “Document pending lawsuits”
+                                </div>
+                                <div class="form-uploaded__size">
+                                    617.45 kb
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="clearfix">
+                <div class="pull-left"><a href="#" class="btn">back</a></div>
+                <div class="pull-right"><a href="#" class="btn btn-primary">choose product</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+</div>
+    <footer class="footer">
+        <div class="footer-search">
+            <div class="container">
+                <input type="search" placeholder="placeholder">
+                <label>For example, <span>CAR INSURANCE, POLICY</span></label>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 hidden-xs hidden-sm">
+                        <div class="footer__title">
+                            Main
+                        </div>
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about us</a></li>
+                                <li><a href="#">blog </a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footer__title">
+                            Insurance
+                        </div>
+                        <div class="footer__text">
+                            <ul>
+                                <li><a href="#">General Liability Insurance (CGL)</a></li>
+                                <li><a href="#">Errors and Omissions Insurance (E&O)</a></li>
+                                <li><a href="#">Professional Liability Insurance</a></li>
+                                <li><a href="#">Directors and Officers Insurance (D&O)</a></li>
+                                <li><a href="#">Cyber Liability Insurance</a></li>
+                                <li><a href="#">Contents and Property Insurance</a></li>
+                                <li><a href="#">Commercial Vehicle Insurance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footer__title">
+                            Contact
+                        </div>
+                        <div class="footer__contact">
+                            sales@peercircle.com
+                            Quebek, 32 street, 56
+                        </div>
+                        <div class="footer__contact">
+                            9476 97847 8465 34
+                        </div>
+                        <img src="../../images/logo-white.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/vendor/jquery-3.1.0.min.js"></script>
+    <script src="../../js/vendor.min.js"></script>
+    <script src="../../js/app.min.js"></script>
+
+
+    </body>
+</html>

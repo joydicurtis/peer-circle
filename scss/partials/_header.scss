@@ -1,6 +1,15 @@
 .header {
 	padding: 13px 0;
 	box-shadow: 0 0 5px rgba(0,0,0,.2);
+	.container {
+		width: auto;
+		@include breakpoint(large) {
+			width: 960px;
+		}
+		@include breakpoint(xlarge) {
+			width: 1160px;
+		}
+	}
 	.btn {
 		margin: 5px 0;
 		@include breakpoint(large) {
@@ -20,6 +29,7 @@
 	right: 15px;
 	@include breakpoint(medium) {
 		float: none;
+		left: 15px;
 	}
 	@include breakpoint(large) {
 		width: auto;
@@ -32,7 +42,9 @@
 	}
 	&.header-menu {
 		position: absolute;
+		width: 100%;
 		@include breakpoint(large) {
+			position: relative;
 		    padding-left: 15px;
 		    padding-right: 15px;
 		    width: 33.33333333%;
@@ -98,6 +110,9 @@
     	left: 0;
     	right: 0;
     	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    	@include breakpoint(medium) {
+    		top: 71px;
+    	}
     	@include breakpoint(large) {
     		position: relative;
 			visibility: visible;
@@ -109,7 +124,6 @@
     	li {
     		text-align: center;
     		@include breakpoint(medium) {
-    			padding: 6px 0;
     			&:last-child {
     				margin-right: 0;
     			}

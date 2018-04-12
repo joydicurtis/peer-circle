@@ -110,12 +110,8 @@ input[type="submit"],
     margin-right: -11px;
     .form-item {
         margin-bottom: 24px;
-        padding: 0 5px;
         @include breakpoint(medium) {
             width: auto;
-            margin-bottom: 22px;
-            padding-left: 11px;
-            padding-right: 11px;
         }
         .form-tip {
             position: relative;
@@ -212,6 +208,11 @@ i {
     padding: 40px;
     margin: 0 auto 30px;
     max-width: 670px;
+}
+.form-container--transparent {
+    padding: 0;
+    background: none;
+    box-shadow: none;
 }
 .select2-container--default {
     .select2-selection--multiple {
@@ -394,4 +395,49 @@ label.register-switch-label {
 .form-uploaded__size {
     font-size: $fontSize-small;
     color: $gray-text;
+}
+.details-item {
+    border-bottom: solid 2px $gray-table-border;
+    padding: 22px 0;
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+.details-item__label {
+    width: 40%;
+    float: left;
+    font-size: $fontSize-small;
+    color: $gray-text;
+}
+.details-item__content {
+    width: 60%;
+    overflow: hidden;
+    font-size: $fontSize-small;
+}
+.details-item__name {
+    img {
+        margin-right: 15px;
+    }
+    font-size: $fontSize-larger;
+    font-weight: $fontWeight-bold;
+    margin-bottom: 20px;
+}
+.details-item__text {
+    color: $gray-text;
+    font-size: $fontSize-small;
+}
+.form-tooltip {
+    font-size: $fontSize-xsmall;
+    color: $gray-text;
+}
+.success-icon {
+    display: block;
+    margin: 0 auto 15px;
+    width: 23px;
+    height: 23px;
+    background: url('../images/success-icon.png') no-repeat;
 }
