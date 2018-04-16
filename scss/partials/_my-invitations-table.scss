@@ -1,0 +1,40 @@
+.my-invitations-table {
+	.product-table-header,
+	.product-table-row {
+		.product-table-col {
+			width: 16.66666%;
+			padding: 0 5px;
+			&:nth-child(1) {
+				width: 50%;
+				line-height: 1;
+				.product-table-name {
+					font-weight: $fontWeight-bold;
+				}
+			}
+			&:nth-child(2) {
+				
+			}
+			&:nth-child(3) {
+
+			}
+			&:nth-child(4) {
+
+			}
+			&:nth-child(5) {
+				font-weight: $fontWeight-bold;
+				width: 25%;
+			}
+			&:nth-child(6) {
+				font-weight: $fontWeight-bold;
+				width: 25%;
+			}
+		}
+	}
+}
+.product-table-img {
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	line-height: 1;
+}

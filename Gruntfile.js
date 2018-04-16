@@ -41,7 +41,8 @@ module.exports = function (grunt) {
             'js/vendor/slick.js',
             'js/vendor/bootstrap.js',
             'js/vendor/select2.full.js',
-            'js/vendor/ion.rangeSlider.js'
+            'js/vendor/ion.rangeSlider.js',
+            'js/vendor/jquery.magnific-popup.js'
           ]
         }
       },

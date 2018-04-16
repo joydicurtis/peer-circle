@@ -52,6 +52,7 @@ input[type="submit"],
         border: 2px solid $color-primary-hover;
         box-shadow: none;
         color: $gray-text;
+        outline: none;
     }
 }
 .btn--fullWidth {
@@ -74,6 +75,21 @@ input[type="submit"],
         background-color: transparent;
         border: solid 2px transparent;
         color: $color-primary-hover;
+    }
+}
+.btn-default-blue {
+    background-color: transparent;
+    border: solid 2px transparent;
+    color: $color-secondary;
+    padding: 0;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border: solid 2px transparent;
+        color: $color-secondary;
     }
 }
 .btn-primary {
@@ -160,6 +176,8 @@ input[type="submit"],
         &[disabled] {
             background: #fbfbfd;
             box-shadow: 0 2px 0 0 #e3e4e9;
+            font-weight: $fontWeight-normal;
+            color: $gray-text;
         }
         &.error {
              box-shadow: 0 2px 0 0 $red;
@@ -322,6 +340,13 @@ i {
     }
     .select2-dropdown {
         border: solid 1px $gray-table-border; 
+    }
+}
+.select2-white {
+    .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, 
+    .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
+    .select2-container--default.select2-container--focus .select2-selection--multiple {
+        background: red;
     }
 }
 .irs-with-grid {
@@ -489,4 +514,41 @@ label.register-switch-label {
     width: 23px;
     height: 23px;
     background: url('../images/success-icon.png') no-repeat;
+}
+
+.file_upload {
+    position: relative;
+    width: 155px;
+    height: 155px;
+    border: dashed 1px $gray-table-border;
+    border-radius: 5px;
+    background: url('../images/upload.svg') center 15px no-repeat;
+    background-size: 62px;
+    float: left;
+    margin-right: 30px;
+    &:hover,
+    &:focus {
+        border: dashed 1px $color-secondary;
+    }
+    input[type="file"] {
+        display: block;
+        width: 155px;
+        height: 155px;
+        opacity: 0;
+    }
+    span {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        font-size: $fontSize-xsmall;
+        text-align: center;
+    }
+    +span {
+        display: block;
+        color: $gray-text;
+        font-size: $fontSize-small;
+        overflow: hidden;
+        margin-top: 50px;
+    }
 }
