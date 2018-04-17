@@ -7,26 +7,61 @@
 			&:nth-child(1) {
 				width: 50%;
 				line-height: 1;
+				@include breakpoint(medium) {
+					width: 40%;
+				}
+				@include breakpoint(large) {
+					width: 25%;
+				}
 				.product-table-name {
 					font-weight: $fontWeight-bold;
 				}
+				.product-table-text {
+					font-size: $fontSize-xsmall;
+					font-weight: $fontWeight-normal;
+					margin-top: 5px;
+					a {
+						color: $blue-dark;
+					}
+				}
 			}
 			&:nth-child(2) {
-				
+				@include breakpoint(large) {
+					width: 15%;
+				}
 			}
 			&:nth-child(3) {
-
+				@include breakpoint(large) {
+					width: 15%;
+				}
 			}
 			&:nth-child(4) {
-
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 15%;
+				}
 			}
 			&:nth-child(5) {
 				font-weight: $fontWeight-bold;
 				width: 25%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 15%;
+				}
 			}
 			&:nth-child(6) {
 				font-weight: $fontWeight-bold;
 				width: 25%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 15%;
+				}
 			}
 		}
 	}

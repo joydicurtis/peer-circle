@@ -18,6 +18,30 @@
                     <div class="col-xs-12">
                         <div class="form-item">
                             <label>Business industry</label>
+                            <div class="select-dropdown">
+                              <button mat-button
+                                      (clickOutside)="showItems = $event.value ? !$event.value : showItems"
+                                      (click)="showItems = !showItems"
+                                      class="menu-button"
+                                      type="button">
+                                <span>Selected item</span>
+                                <i class="fa fa-sort-down"></i>
+                              </button>
+                              <div class="items">
+                                <div class="item">
+                                  <button mat-button
+                                          type="button"
+                                          (click)="selectItem(selectedOption = option)">
+                                    option</button>
+                                </div>
+                                <div class="item">
+                                  <button mat-button
+                                          type="button"
+                                          (click)="selectItem(selectedOption = option)">
+                                    option</button>
+                                </div>
+                              </div>
+                            </div>
                             <select class="js-select2-multiple" name="states[]" multiple="multiple">
                               <option value="first">Associations, Non-profits and Charities insurance</option>
                               <option value="second">Associations, Non-profits and Charities insurance</option>
@@ -120,29 +144,17 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
                         <div class="toggle-switch">
-                          <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
-                          <label for="sex_f" class="register-switch-label">No pending  law suits</label>
-                          <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
-                          <label for="sex_m" class="register-switch-label">Pending law suits</label>
+                          <input type="radio" name="suits" value="F" id="no_pending" class="register-switch-input" checked>
+                          <label for="no-pending" class="register-switch-label">No pending  law suits</label>
+                          <input type="radio" name="suits" value="M" id="pending" class="register-switch-input">
+                          <label for="pending" class="register-switch-label">Pending law suits</label>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <a href="#" class="btn btn-default btn--small">upload pdf</a>
                     </div>
                     <div class="col-xs-12">
-                        <div class="form-uploaded clearfix">
-                            <div class="form-uploaded__img">
-                                <img src="images/pdf-icon.svg" alt>
-                            </div>
-                            <div class="form-uploaded-content">
-                                <div class="form-uploaded__item">
-                                    “Document pending lawsuits”
-                                </div>
-                                <div class="form-uploaded__size">
-                                    617.45 kb
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="form-uploaded">
                             <div class="form-uploaded__img">
                                 <img src="images/pdf-icon.svg" alt>
