@@ -59,6 +59,30 @@
                     <div class="col-xs-12">
                         <div class="form-item">
                             <label>Business industry</label>
+                            <div class="select-dropdown">
+                              <button mat-button
+                                      (clickOutside)="showItems = $event.value ? !$event.value : showItems"
+                                      (click)="showItems = !showItems"
+                                      class="menu-button"
+                                      type="button">
+                                <span>Selected item</span>
+                                <i class="fa fa-sort-down"></i>
+                              </button>
+                              <div class="items">
+                                <div class="item">
+                                  <button mat-button
+                                          type="button"
+                                          (click)="selectItem(selectedOption = option)">
+                                    option</button>
+                                </div>
+                                <div class="item">
+                                  <button mat-button
+                                          type="button"
+                                          (click)="selectItem(selectedOption = option)">
+                                    option</button>
+                                </div>
+                              </div>
+                            </div>
                             <select class="js-select2-multiple" name="states[]" multiple="multiple">
                               <option value="first">Associations, Non-profits and Charities insurance</option>
                               <option value="second">Associations, Non-profits and Charities insurance</option>

@@ -59,6 +59,129 @@
                 "$900.000", "$1.700.000"
             ]
         });
+        $("#range_credits").ionRangeSlider({
+            hide_min_max: true,
+            keyboard: true,
+            step: 1,
+            grid: true,
+            hide_min_max: true,
+            hide_from_to: true,
+            values: [
+                "$0", "$70.000",
+                "$250.000", "$475.000",
+                "$900.000", "$1.700.000"
+            ]
+        });
     });
+    $('.js-count-popup').magnificPopup({
+      type: 'inline',
+      preloader: false,
+      focus: '#name',
+      callbacks: {
+        beforeOpen: function() {
+          if ($(window).width() < 700) {
+            this.st.focus = false;
+          }
+          else  {
+            this.st.focus = '#name';
+          }
+        }
+      }
+    });
+    FusionCharts.ready(function () {
+    var revenueChart = new FusionCharts({
+        type: 'column2d',
+        renderAt: 'chart-container',
+        width: '550',
+        height: '350',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "subCaption": "Sales",
+                "xAxisName": "",
+                "yAxisName": "",
+                "numberPrefix": "$",
+                "paletteColors": "#5da0e7",
+                "bgColor": "#ffffff",
+                "borderAlpha": "20",
+                "canvasBorderAlpha": "0",
+                "usePlotGradientColor": "0",
+                "plotBorderAlpha": "10",
+                "placevaluesInside": "1",
+                "rotatevalues": "1",
+                "valueFontColor": "transparent",                
+                "showXAxisLine": "1",
+                "xAxisLineColor": "transparent",
+                "divlineColor": "transparent",               
+                "divLineIsDashed": "1",
+                "showAlternateHGridColor": "0",
+                "subcaptionFontBold": "0",
+                "subcaptionFontSize": "14"
+            },            
+            "data": [
+                {
+                    "label": "1st Mon",
+                    "value": "90"
+                }, 
+                {
+                    "label": "2nd Tue",
+                    "value": "85"
+                }, 
+                {
+                    "label": "3rd Wen",
+                    "value": "90"
+                }, 
+                {
+                    "label": "1st Mon",
+                    "value": "150"
+                }, 
+                {
+                    "label": "2nd Tue",
+                    "value": "300"
+                }, 
+                {
+                    "label": "3rd Wen",
+                    "value": "170"
+                }, 
+                {
+                    "label": "1st Mon",
+                    "value": "120"
+                }, 
+                {
+                    "label": "2nd Tue",
+                    "value": "350"
+                }, 
+                {
+                    "label": "3rd Wen",
+                    "value": "400"
+                }, 
+                {
+                    "label": "1st Mon",
+                    "value": "200"
+                }, 
+                {
+                    "label": "2nd Tue",
+                    "value": "370"
+                }, 
+                {
+                    "label": "3rd Wen",
+                    "value": "300"
+                }
+            ],
+            "trendlines": [
+                {
+                    "line": [
+                        {
+                            "startvalue": "0",
+                            "color": "transparent",
+                            "valueOnRight": "1",
+                            "displayvalue": "Monthly Target"
+                        }
+                    ]
+                }
+            ]
+        }
+    }).render();
+});
   });
 })();

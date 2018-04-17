@@ -1,0 +1,85 @@
+.my-policies-table {
+	.product-table-header,
+	.product-table-row {
+		.product-table-col {
+			width: 14.28571%;
+			padding: 0 5px;
+			&:nth-child(1) {
+				width: 50%;
+				font-weight: $fontWeight-bold;
+				line-height: 1;
+				@include breakpoint(medium) {
+					width: 40%;
+				}
+				@include breakpoint(large) {
+					width: 25%;
+				}
+				@include breakpoint(xlarge) {
+					width: 20%;
+				}
+			}
+			&:nth-child(2) {
+				width: 25%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 16%;
+				}
+				@include breakpoint(xlarge) {
+					width: 12%;
+				}
+			}
+			&:nth-child(3) {
+				@include breakpoint(large) {
+					width: 26%;
+				}
+				@include breakpoint(xlarge) {
+					width: 20%;
+				}
+			}
+			&:nth-child(4) {
+				@include breakpoint(xlarge) {
+					width: 12%;
+				}
+			}
+			&:nth-child(5) {
+				font-weight: $fontWeight-bold;
+				@include breakpoint(xlarge) {
+					width: 12%;
+				}
+			}
+			&:nth-child(6) {
+				font-weight: $fontWeight-bold;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 17%;
+				}
+				@include breakpoint(xlarge) {
+					width: 12%;
+				}
+			}
+			&:nth-child(7) {
+				width: 25%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 16%;
+				}
+				@include breakpoint(xlarge) {
+					width: 12%;
+				}
+			}
+		}
+	}
+}
+.product-table-img {
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	line-height: 1;
+}

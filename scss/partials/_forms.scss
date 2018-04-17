@@ -51,7 +51,17 @@ input[type="submit"],
         background: $color-primary-hover;
         border: 2px solid $color-primary-hover;
         box-shadow: none;
-        color: $gray-text;
+        color: $blue-dark;
+        outline: none;
+    }
+    &[disabled] {
+        &:hover,
+        &:focus,
+        &:active,
+        &:active:hover {
+            background: $color-primary;
+            border: 2px solid $color-primary;
+        }
     }
 }
 .btn--fullWidth {
@@ -74,6 +84,21 @@ input[type="submit"],
         background-color: transparent;
         border: solid 2px transparent;
         color: $color-primary-hover;
+    }
+}
+.btn-default-blue {
+    background-color: transparent;
+    border: solid 2px transparent;
+    color: $color-secondary;
+    padding: 0;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border: solid 2px transparent;
+        color: $color-secondary;
     }
 }
 .btn-primary {
@@ -128,6 +153,20 @@ input[type="submit"],
         .wpcf7-not-valid {
             border-color: $color-secondary;
         }
+        .input-group {
+            input {
+                border-radius: 5px 0 0 5px;
+            }
+            .btn {
+                margin: 0;
+                background: $color-secondary;
+                color: $white;
+                border-radius: 5px;
+                border: solid 2px $color-secondary;
+                box-shadow: 0px 4px 5px 0 rgba(57, 135, 228, 0.52);
+                font-size: $fontSize-xxsmall;
+            }
+        }
     }
     label {
         color: $gray-text;
@@ -160,6 +199,8 @@ input[type="submit"],
         &[disabled] {
             background: #fbfbfd;
             box-shadow: 0 2px 0 0 #e3e4e9;
+            font-weight: $fontWeight-normal;
+            color: $gray-text;
         }
         &.error {
              box-shadow: 0 2px 0 0 $red;
@@ -324,6 +365,13 @@ i {
         border: solid 1px $gray-table-border; 
     }
 }
+.select2-white {
+    .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, 
+    .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
+    .select2-container--default.select2-container--focus .select2-selection--multiple {
+        background: red;
+    }
+}
 .irs-with-grid {
     width: 90%;
     &:after {
@@ -362,6 +410,7 @@ i {
     height: 12px;
     z-index: 2;
 } 
+
 .irs-bar-edge {
     background: $color-secondary;
     height: 12px;
@@ -394,7 +443,31 @@ i {
     font-size: $fontSize-small;
     color: $blue-dark;
 }
+.range_yellow {
+   .irs-bar {
+        background: $color-primary;
+    } 
+    .irs-bar-edge {
+        background: $color-primary;
+    }
+    .irs-slider {
+        background: $color-primary;
+    }
+    .irs-slider {
+        background: $color-primary;
+        box-shadow: none;
+        width: 12px;
+        height: 12px;
+        top: 25px;
+    }
+    .irs-grid-text {
+        display: none;
+    }
+    .irs-grid-pol {
+        display: none;
+    }
 
+}
 .toggle-switch {
   height: 50px;
   margin-bottom: 15px;
@@ -445,6 +518,13 @@ label.register-switch-label {
     font-size: $fontSize-small;
     color: $gray-text;
 }
+.toggle-switch {
+    #no_pending.register-switch-input:checked {
+        +.form-uploaded {
+            background: red;
+        }
+    }
+}
 .details-item {
     border-bottom: solid 2px $gray-table-border;
     padding: 22px 0;
@@ -489,4 +569,193 @@ label.register-switch-label {
     width: 23px;
     height: 23px;
     background: url('../images/success-icon.png') no-repeat;
+}
+
+.file_upload {
+    position: relative;
+    width: 155px;
+    height: 155px;
+    border: dashed 1px $gray-table-border;
+    border-radius: 5px;
+    background: url('../images/upload.svg') center 15px no-repeat;
+    background-size: 62px;
+    float: left;
+    margin-right: 30px;
+    &:hover,
+    &:focus {
+        border: dashed 1px $color-secondary;
+    }
+    input[type="file"] {
+        display: block;
+        width: 155px;
+        height: 155px;
+        opacity: 0;
+    }
+    span {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        font-size: $fontSize-xsmall;
+        text-align: center;
+    }
+    +span {
+        display: block;
+        color: $gray-text;
+        font-size: $fontSize-small;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+}
+.socials__item {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    margin-right: 20px;
+    background: url("../images/socials.png") no-repeat;
+    &.socials__item_fb {
+        background-position: 0 0;
+    }
+    &.socials__item_tw {
+        background-position: -62px 0;
+    }
+    &.socials__item_in {
+        background-position: -124px 0;
+    }
+}
+.input-block {
+  margin-top: 25px;
+  position: relative;
+  label {
+    color: #abb8c5;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  input, .password-info {
+    color: #1b375f;
+    outline: none;
+    font-size: 16px;
+    height: 60px;
+    width: 100%;
+    background-color: #f4f5f7;
+    border: none;
+    border-radius: 5px;
+    padding: 0 25px;
+    margin-top: 13px;
+    font-weight: bold;
+  }
+}
+
+.select-dropdown {
+  & {
+    position: relative;
+  }
+  .menu-button {
+    height: 60px;
+    width: 100%;
+    border: 1px solid #e3e4e9;
+    border-top: none;
+    font-weight: bold;
+    outline: none;
+    color: #4d5f77;
+    padding: 0 25px;;
+    border-radius: 4px;
+    margin: 13px 0 0 0;
+    text-transform: inherit;
+    font-size: 14px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    &:disabled {
+      opacity: 0.5;
+    }
+    i.fa.fa-sort-down {
+            border-color: #888 transparent transparent transparent;
+            border-style: solid;
+            border-width: 5px 4px 0 4px;
+            height: 0;
+            margin-left: -4px;
+            margin-top: -2px;
+            position: absolute;
+            top: 50%;
+            width: 0;
+            right: 25px;
+            display: block;
+            padding: 0;
+    }
+    +.items {
+        display: none;
+      }
+      &:focus {
+        +.items {
+            display: block;
+        }
+      }
+  }
+  
+  .items {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    right: 0;
+    border: 1px solid #e3e4e9;
+    border-radius: 4px;
+    z-index: 10;
+    .item {
+      background-color: #ffffff;
+
+      border-bottom: solid 1px $gray-table-border;
+      &:last-child {
+        border: none;
+      }
+    }
+    button {
+      width: 100%;
+      padding: 15px 25px 16px;
+      font-size: 14px;
+      text-align: left;
+      color: #1c385e;
+      border-radius: 0;
+      background: none;
+        box-shadow: none;
+        margin: 0;
+      &:hover {
+        background-color: #5da0e7;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+//  стиль для элемента отдельной библиотеки
+:host /deep/ .mat-button-focus-overlay {
+  background-color: transparent;
+}
+
+.select-dropdown {
+    button {
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background: $gray-bg;
+        text-align: left;
+        padding: 15px 25px 16px;
+        text-transform: none;
+        letter-spacing: normal;
+        font-family: $font-base;
+        box-shadow: 0 2px 0 0 $gray-table-border;
+        border: none;
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:hover {
+            cursor: pointer;
+            background: $gray-bg;
+            border: none;
+            box-shadow: 0 2px 0 0 $color-secondary;
+            color: $blue-dark;
+            outline: none;
+        }
+    }
 }

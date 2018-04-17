@@ -1,0 +1,44 @@
+.mfp-bg {
+	background: #778396;
+}
+.mfp-inline-holder .mfp-content, 
+.mfp-ajax-holder .mfp-content {
+	background: $white;
+	padding: 60px 50px;
+	border-radius: 10px;
+	max-width: 670px;
+}
+button {
+	&.mfp-close {
+		background: none;
+		border: solid 1px $gray-table-border;
+		border-radius: 5px;
+		width: 30px;
+		height: 30px;
+		margin: 40px;
+		line-height: 30px;
+		text-align: center;
+		&:hover,
+		&:focus {
+			background: none;
+		}
+	}
+}
+.popup-img {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+	margin-right: 20px;
+	line-height: 1;
+	margin-bottom: 70px;
+}
+.popup-content {
+	line-height: 1;
+	margin-bottom: 70px;
+}
+.popup-name {
+	font-weight: $fontWeight-bold;
+	margin-bottom: 10px;
+}
