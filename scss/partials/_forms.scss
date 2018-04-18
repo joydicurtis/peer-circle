@@ -560,8 +560,14 @@ label.register-switch-label {
     font-size: $fontSize-small;
 }
 .form-tooltip {
-    font-size: $fontSize-xsmall;
+    font-size: $fontSize-xxsmall;
     color: $gray-text;
+    font-weight: $fontWeight-bold;
+    line-height: 1;
+    .btn {
+        line-height: 1;
+        border: none;
+    }
 }
 .success-icon {
     display: block;
