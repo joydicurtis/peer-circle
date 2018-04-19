@@ -13,6 +13,7 @@
 	.header-container {
 		width: 100%;
 		max-width: 1830px;
+		padding: 0;
 	}
 	.btn {
 		margin: 5px 0;
@@ -165,6 +166,12 @@
     		}
 		    &:nth-child(6) {
 				border-top: solid 1px $gray-border;
+				.header-admin & {
+					border-top: none;
+				}
+				@include breakpoint(large) {
+					border-top: none;
+				}
 			}
 			&:nth-child(6) {
 				a {
@@ -388,6 +395,9 @@
 	.header-nav {
 		float: left;
 		margin-right: 15px;
+		@include breakpoint(large) {
+			display: none;
+	    }
 	}
 	.header-info__item-phone {
 		padding: 32px 0;
@@ -421,26 +431,60 @@
 		width: 100%;
 		margin-left: 0;
 		float: none;
+		@include breakpoint(large) {
+			display: block;
+			text-align: left;
+		    width: 70%;
+	    	float: left;
+		    margin-left: 16.66666%;
+	    }
 		ul {
+			@include breakpoint(large) {
+				position: relative;
+			}
 			li {
+				display: block;
+				margin-right: 18px;
+				@include breakpoint(large) {
+					display: inline-block;
+				}
 				@include breakpoint(xlarge) {
-					margin-right: 30px;
+					margin-right: 10px;
+				}
+				&.header-nav-action {
+					border-top: solid 1px $gray-border;
+					@include breakpoint(large) {
+						display: none;
+					}
+					.btn {
+						padding: 10px 20px;
+					}
 				}
 				a {
-					font-size: $fontSize-xxsmall;
+					font-size: $fontSize-xsmall;
 					font-weight: $fontWeight-bold;
 					letter-spacing: 1px;
 					color: $gray-text;
+					padding: 10px 0;
 					transition: all .3s ease-in-out;
+					@include breakpoint(large) {
+						font-size: 11px;
+						padding: 15px 0 0;
+					}
 					&:hover,
 					&:focus {
-						color: $color-secondary;
+						color: $white;
+						@include breakpoint(large) {
+							color: $color-secondary;
+						}
 						&:after {
-							content: ' ';
-							border-bottom: solid 4px $color-secondary;
-							display: block;
-							width: 50px;
-							margin: 10px auto 0;
+							@include breakpoint(large) {
+								content: ' ';
+								border-bottom: solid 4px $color-secondary;
+								display: block;
+								width: 50px;
+								margin: 10px auto 0;
+							}
 						}
 					}
 					&:after {
@@ -449,13 +493,17 @@
 				}
 				&.active {
 					a {
-						color: $color-secondary;
+						@include breakpoint(large) {
+							color: $color-secondary;
+						}
 						&:after {
-							content: ' ';
-							border-bottom: solid 4px $color-secondary;
-							display: block;
-							width: 50px;
-							margin: 10px auto 0;
+							@include breakpoint(large) {
+								content: ' ';
+								border-bottom: solid 4px $color-secondary;
+								display: block;
+								width: 50px;
+								margin: 10px auto 0;
+							}
 						}
 					}
 				}
@@ -489,7 +537,6 @@
 .header-profile-link {
 	position: relative;
 	display: inline-block;
-	margin-left: 10px;
     a {
     	&:after {
     		content: ' ';
@@ -556,4 +603,10 @@
 			color: $blue-dark;
     	}
     }
+}
+.header-registration {
+	background: $gray-bg;
+	.header-logo {
+		position: relative;
+	}
 }
