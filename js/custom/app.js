@@ -88,6 +88,10 @@
         }
       }
     });
+    $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
     FusionCharts.ready(function () {
     var revenueChart = new FusionCharts({
         type: 'column2d',

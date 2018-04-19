@@ -1,5 +1,5 @@
 .header {
-	padding: 13px 0;
+	padding: 13px 0 0;
 	box-shadow: 0 0 5px rgba(0,0,0,.2);
 	.container {
 		width: auto;
@@ -608,5 +608,76 @@
 	background: $gray-bg;
 	.header-logo {
 		position: relative;
+	}
+}
+.header-creating-store {
+	border-top: solid 1px $gray-border;
+	box-shadow: 0 2px 0 0 $gray-table-border;
+	padding: 20px 0;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			color: $gray-border;
+			font-weight: $fontWeight-bold;
+			&:after {
+				content: ' ';
+				display: inline-block;
+				border-bottom: dashed 1px $gray-border;
+				width: 38px;
+				margin: 0 5px;
+			    position: relative;
+			    top: -5px;
+			}
+			&:last-child {
+				&:after {
+					content: none;
+				}
+			}
+			&:before {
+				content: ' ';
+				position: relative;
+				top: 5px;
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				border: solid 1px $gray-border;
+				margin-right: 10px;
+			}
+			&.active {
+				color: $blue-dark;
+				&:before {
+					content: ' ';
+					position: relative;
+					top: 5px;
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+					background: #d3f6e5;
+					border: solid 1px $green;
+					margin-right: 10px;
+				}
+			}
+			&.done {
+				color: $blue-dark;
+				&:before {
+					content: ' ';
+					position: relative;
+					top: 5px;
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+					background: url('../images/success-icon.png') no-repeat;
+					border: solid 1px transparent;
+					margin-right: 10px;
+				}
+			}
+		}
 	}
 }
