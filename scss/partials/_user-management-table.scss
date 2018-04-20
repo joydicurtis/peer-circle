@@ -31,4 +31,12 @@
 			}
 		}
 	}
+	&.force-display {
+		.product-table-header,
+		.product-table-row {
+			.product-table-col {
+				width: 16.66666%!important;
+			}
+		}
+	}
 }

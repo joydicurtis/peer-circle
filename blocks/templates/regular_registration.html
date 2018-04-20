@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en-US">
     <head lang="en">
         <meta charset="UTF-8">
@@ -13,83 +12,55 @@
 
 
 <div class="siteContent">
-    <header class="header header-admin">
-        <div class="container header-container">
-                <div class="col-sm-12 col-md-2">
-                    <div class="header-logo">
-                        <img src="../../images/logo.svg">
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-9 col-lg-7 col-lg-7 col-lg-offset-2 col-md-offset-2">
-                    <nav class="header-nav">
-                        <a href="#" class="header-nav-mobButton js-toggle" aria-label="Open Navigation" data-toggle=".header-nav">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </nav>
-                    <div class="header-title hidden-xs">My requests</div>
-                </div>
-                    <nav class="header-nav header-menu clearfix">
-                        <ul>
-                            <li class="active"><a href="#">products</a></li>
-                            <li><a href="#">portfolio</a></li>   
-                            <li><a href="#">risk management</a></li>
-                            <li><a href="#">user management</a></li>                
-                        </ul>
-                    </nav>
-                    <div class="col-sm-8 col-md-1 col-lg-3 hidden-xs">
-                    <div class="header-profile">
-                        <div class="header-profile-name hidden-sm hidden-md">
-                            <a href="#">Margaret Mead</a>
-                        </div>
-                        <div class="header-profile-userpic">
-                            <a href="#"><img src="../../images/userpic.png"></a>
-                        </div>
-                        <div class="header-profile-link">
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                
-        </div>
-    </header>
+<header class="header header-registration">
+    <div class="container">
+            <div class="header-logo">
+                <a href="#"><img src="../../images/logo-2.png" alt=""></a>
+            </div>
+        </div>  
+    </div>
+</header>
+
+
     <main>
+
+
 <section class="siteSection siteSection--gray">
     <div class="container">
-        <h2 class="u-text--center">Creating store</h2>
+        <h2 class="u-text--center">Register</h2>
         <div class="form-container">
             <div class="form">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="form-item">
-                            <label for="cname">Store name</label>
-                            <input type="text" id="cname" name="cname" placeholder="For example: Liability circle">
+                            <label for="cname">Name *</label>
+                            <input type="text" name="" placeholder="Methew">
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="form-item">
-                            <label for="cname">Company name</label>
-                            <input type="text" id="" name="" placeholder="Etherium">
+                            <label for="">Last name *</label>
+                            <input type="text" name="" placeholder="Mackonahi">
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <label for="cname">Rignts and privilege</label>
                         <div class="form-item">
-                            <input type="text" id="e" name="" placeholder="Rignts and privilege">
+                            <label for="">Email Address *</label>
+                            <input type="email" name="" placeholder="MethewMac@gmail.com">
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="form-item clearfix">
-                            <div class="file_upload">
-                                <input type="file" name="">
-                                <span>Drag & Drop or <a href="#">Browse</a></span>
-                            </div>
-                            <span>We support JPG and PNG files. Make sure that your files is no more than 500 kb.</span>
+                        <div class="form-item">
+                            <label for="">Phone number *</label>
+                            <input type="email" name="" placeholder="(xxx) xxx-xxxx">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="toggle-switch">
+                          <input type="radio" name="" value="M" id="" class="register-switch-input" checked>
+                          <label for="" class="register-switch-label">Male</label>
+                          <input type="radio" name="" value="F" id="" class="register-switch-input">
+                          <label for="" class="register-switch-label">Female</label>
                         </div>
                     </div>
                 </div>
@@ -98,41 +69,50 @@
         <div class="form-container">
             <div class="form">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-6">
                         <div class="form-item">
-                            <label for="cname">Store manager name</label>
-                            <input type="text" id="cname" name="cname" placeholder="John">
+                            <label for="cname">Password</label>
+                            <input type="password" name="" placeholder="">
                         </div>
                     </div>
-                    <div class="col-xs-12">
-                        <div class="form-item">
-                            <label for="cname">Store manager last name  </label>
-                            <input type="text" id="cname" name="cname" placeholder="Dou">
+                    <div class="col-xs-6">
+                        <div class="pass-strength">
+                            <ul>
+                                <li></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12">
+                    <ul>
+                        <li>A digit must occur at least once</li>
+                        <li>A lower case letter must occur at least once</li>
+                        <li>An upper case letter must occur at least once</li>
+                        <li>Special character must occur at least once</li>
+                        <li>No whitespace allowed in the entire string</li>
+                        <li>At least 6 characters</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
                         <div class="form-item">
-                            <label for="cname">Phone number</label>
-                            <input type="text" id="cname" name="cname" placeholder="469-290-2345">
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="form-item">
-                            <label for="cname">Email</label>
-                            <input type="text" id="cname" name="cname" placeholder="JohnDou@gmail.com">
+                            <label for="">Confirm password</label>
+                            <input type="password" name="" placeholder="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="form-container">
-            <div class="clearfix">
-                <div class="pull-left"><a href="#" class="btn">back</a></div>
-                <div class="pull-right"><a href="#" class="btn btn-primary">create store</a></div>
+            <div class="form">
+                <div  class="clearfix">
+                    <div class="pull-left"><a href="#" class="btn">back to login</a></div>
+                    <div class="pull-right"><button type="submit" class="btn btn-primary" disabled>register</button></div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+
     </main>
 </div>
     <footer class="footer">
@@ -198,4 +178,3 @@
 
     </body>
 </html>
-

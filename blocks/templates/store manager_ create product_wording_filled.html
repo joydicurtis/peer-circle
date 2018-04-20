@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en-US">
     <head lang="en">
         <meta charset="UTF-8">
@@ -14,22 +13,6 @@
 
 <div class="siteContent">
 <header class="header header-admin">
-    <div class="header-info hidden-xs">
-        <div class="container header-container">
-            <div class="row">
-                <div class="col-sm-4 col-md-6 col-lg-7 col-lg-offset-2 col-md-offset-3">
-                    <div class="header-search">
-                        <form role="search" method="get" class="search-form" action=""> <input type="text" class="search-field" placeholder="Search insurance products..." value="" name="s" /> <button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button> </form>
-                    </div>   
-                </div>
-                <div class="col-sm-8 col-md-3 hidden-xs">
-                    <div class="header-info__item header-info__item-phone">
-                        <a href="tel:800-123-5678">800-123-5678</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container header-container">
             <div class="col-sm-12 col-md-2">
                 <div class="header-logo">
@@ -60,7 +43,7 @@
                         <li class="header-nav-action"><a href="#" class="btn btn-secondary btn-login">my profile</a></li>                      
                     </ul>
                 </nav>
-                <div class="header-profile col-sm-4 col-sm-offset-4 col-md-1 col-lg-3 hidden-xs">
+                <div class="col-sm-8 col-md-1 col-lg-3 hidden-xs">
                 <div class="header-profile">
                     <div class="header-profile-name hidden-sm hidden-md">
                         <a href="#">Margaret Mead</a>
@@ -73,11 +56,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="header-creating-store">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-md-offset-3">
+                        <ul>
+                            <li class="done">Basic information</li>
+                            <li class="active">Policy builder</li>
+                        </ul> 
+                    </div>
+                </div>
             </div>
-            
+        </div>      
     </div>
 </header>
-
     <main>
 <section class="siteSection siteSection--gray siteSection--noPad">
     <div class="container">
@@ -86,62 +79,54 @@
 </section>
 <section class="siteSection siteSection--gray">
     <div class="container">
-        <h2 class="u-text--center">Policy A1001</h2>
-        <div class="form-container">
-            <div class="details-item clearfix">
-                <div class="details-item__label">Category</div>
-                <div class="details-item__content">General liability</div>
+        <h2 class="u-text--center">Policy Builder</h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#valid_from" aria-controls="valid_from" role="tab" data-toggle="tab">valid from</a></li>
+                <li role="presentation"><a href="#valid_to" aria-controls="valid_to" role="tab" data-toggle="tab">valid to</a></li>
+                <li role="presentation"><a href="#liability_limit" aria-controls="liability_limit" role="tab" data-toggle="tab"> liability limit</a></li>
+                <li role="presentation"><a href="#policy_number" aria-controls="policy_number" role="tab" data-toggle="tab">policy number </a></li>
+                <li role="presentation"><a href="#insured" aria-controls="insured" role="tab" data-toggle="tab">insured </a></li>
+                <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab">address </a></li>
+                <li role="presentation"><a href="#postal_code" aria-controls="postal_code" role="tab" data-toggle="tab"> postal code</a></li>
+                <li role="presentation"><a href="#province_state" aria-controls="province_state" role="tab" data-toggle="tab">province / state </a></li>
+                <li role="presentation"><a href="#province" aria-controls="province" role="tab" data-toggle="tab"> province</a></li>
+                <li role="presentation"><a href="#phone_number" aria-controls="phone_number" role="tab" data-toggle="tab">phone number </a></li>
+              </ul>
             </div>
-            <div class="details-item clearfix">
-                <div class="details-item__label">Subcategory</div>
-                <div class="details-item__content">General liability subcategory</div>
-            </div>
-        </div>
-        <div class="form-container">
-            <div class="details-item clearfix">
-                <div class="details-item__label">Inception date</div>
-                <div class="details-item__content">2018 SE 15</div>
-            </div>
-            <div class="details-item clearfix">
-                <div class="details-item__label">Expiration date</div>
-                <div class="details-item__content">2018 OC 24</div>
-            </div>
-            <div class="details-item clearfix">
-                <div class="details-item__label">Premium</div>
-                <div class="details-item__content"><strong>$ 2000</strong></div>
-            </div>
-            <div class="details-item clearfix">
-                <div class="details-item__label">Payment frequency</div>
-                <div class="details-item__content">Daily</div>
-            </div>
-            <div class="details-item clearfix">
-                <div class="details-item__label">Liability limit</div>
-                <div class="details-item__content"><strong>$ 3 450</strong></div>
-            </div>
-        </div>
-        <div class="form-container">
-            <div class="details-item clearfix">
-                <div class="form-uploaded">
-                    <div class="form-uploaded__img">
-                        <img src="../../images/pdf-icon.svg" alt>
-                    </div>
-                    <div class="form-uploaded-content">
-                        <div class="form-uploaded__item">
-                            “Document pending lawsuits”
+
+            <div class="col-xs-12 col-sm-9 col-md-9">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="valid_from">
+                        <div class="form-container">
+                            <div class="form">
+                                <div class="form-item">
+                                    <textarea>
+                                        policy number: [Policy.Num]
+                                    </textarea>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-uploaded__size">
-                            617.45 kb
+                        <div class="form-container">
+                            <div class="clearfix">
+                                <div class="pull-left"><a href="#" class="btn">back</a></div>
+                                <div class="pull-right"><a href="#" class="btn btn-primary">create product</a></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>        
-        <div class="form-container">
-            <div class="details-item__name">
-                <img src="../../images/bitcoin.png">Ethereum circle
-            </div>
-            <div class="details-item__text">
-                On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and dislike to righteous indignation.
+                    <div role="tabpanel" class="tab-pane" id="valid_to">valid_to</div>
+                    <div role="tabpanel" class="tab-pane" id="liability_limit">liability limit</div>
+                    <div role="tabpanel" class="tab-pane" id="policy_number">policy number</div>
+
+                    <div role="tabpanel" class="tab-pane" id="insured">insured</div>
+                    <div role="tabpanel" class="tab-pane" id="address">address</div>
+                    <div role="tabpanel" class="tab-pane" id="postal_code">postal_code</div>
+                    <div role="tabpanel" class="tab-pane" id="province_state">province / state</div>
+                    <div role="tabpanel" class="tab-pane" id="province">province</div>
+                    <div role="tabpanel" class="tab-pane" id="phone_number">phone_number</div>
+                  </div>
+              </div>
             </div>
         </div>
     </div>
@@ -211,4 +196,3 @@
 
     </body>
 </html>
-

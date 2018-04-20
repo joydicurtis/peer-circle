@@ -1,26 +1,27 @@
-<!doctype html>
-<html lang="en-US">
-    <head lang="en">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
-        <title></title>
-        <link rel="shortcut icon" href="favicon.ico">
-        <!-- CSS -->
-        <link rel="stylesheet" href="../../css/application.css">
-    </head>
-<body>
 <header class="header header-admin">
+    <div class="header-info hidden-xs">
+        <div class="container header-container">
+            <div class="row">
+                <div class="col-sm-4 col-md-6 col-lg-7 col-lg-offset-2 col-md-offset-3">
+                    <div class="header-search">
+                        <form role="search" method="get" class="search-form" action=""> <input type="text" class="search-field" placeholder="Search insurance products..." value="" name="s" /> <button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button> </form>
+                    </div>   
+                </div>
+                <div class="col-sm-8 col-md-3 hidden-xs">
+                    <div class="header-info__item header-info__item-phone">
+                        <a href="tel:800-123-5678">800-123-5678</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container header-container">
-        <div class="row">
-            <div class="col-sm-12 col-md-3">
+            <div class="col-sm-12 col-md-2">
                 <div class="header-logo">
                     <img src="../../images/logo.svg">
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-md-5 col-md-offset-3">
+            <div class="col-sm-4 col-md-9 col-lg-7 col-lg-7 col-lg-offset-2 col-md-offset-2">
                 <nav class="header-nav">
                     <a href="#" class="header-nav-mobButton js-toggle" aria-label="Open Navigation" data-toggle=".header-nav">
                         <span></span>
@@ -32,18 +33,16 @@
                     </a>
                 </nav>
                 <div class="header-title hidden-xs">My requests</div>
-            
+            </div>
                 <nav class="header-nav header-menu clearfix">
                     <ul>
                         <li class="active"><a href="#">my requests</a></li>
-                        <li><a href="#">creating store</a></li>
-                        <li class="header-nav-action"><a href="#" class="btn btn-secondary btn-login">my profile</a></li>
+                        <li><a href="#">create store</a></li>                   
                     </ul>
                 </nav>
-            </div>
-            <div class="col-sm-8 col-md-4 hidden-xs">
+                <div class="col-sm-8 col-md-1 col-lg-3 hidden-xs">
                 <div class="header-profile">
-                    <div class="header-profile-name hidden-sm">
+                    <div class="header-profile-name hidden-sm hidden-md">
                         <a href="#">Margaret Mead</a>
                     </div>
                     <div class="header-profile-userpic">
@@ -52,6 +51,12 @@
                     <div class="header-profile-link">
                         <a href="#"></a>
                     </div>
+                    <div class="profile-links">
+                        <ul>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Log-Out</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,12 +64,11 @@
 </header>
 
 
-<main>
 <section class="siteSection siteSection--gray">
     <div class="container">
         <div class="clearfix">
             <div class="pull-right">
-                <a class="btn btn-primary btn--small" role="button" data-toggle="collapse" href=".product-table-subrow" aria-expanded="false" aria-controls="product-table-subrow">display all</a>
+                <a class="btn btn-primary btn--small hidden-lg" role="button" data-toggle="collapse" href=".product-table-subrow" aria-expanded="false" aria-controls="product-table-subrow">display all</a>
             </div>
         </div>
         <div class="product-table-container">
@@ -120,7 +124,9 @@
         </div>
     </div>
 </section>
-</main>
+
+
+    </main>
 </div>
     <footer class="footer">
         <div class="footer-search">
@@ -182,7 +188,6 @@
     <script src="../../js/vendor/jquery-3.1.0.min.js"></script>
     <script src="../../js/vendor.min.js"></script>
     <script src="../../js/app.min.js"></script>
-
 
     </body>
 </html>
