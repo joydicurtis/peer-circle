@@ -55,6 +55,39 @@
 			}	
 		}
 	}
+	input[type=radio] {
+		display: none;
+		+label {
+			&:before {
+				content: ' ';
+				display: inline-block;
+				width: 23px;
+				height: 23px;
+				background: none;
+				border-radius: 50%;
+				border: solid 1px $gray-border;
+			}
+		}
+		&:checked {
+			+label {
+				&:before {
+					border: solid 1px transparent;
+					background: url('../images/success-icon.png') no-repeat;
+				}
+			}
+		}
+	}
+	// input[type=radio]:checked ~ .check {
+	// 	  border: 5px solid #0DFF92;
+	// 	}
+
+	// 	input[type=radio]:checked ~ .check::before{
+	// 	  background: #0DFF92;
+	// 	}
+
+	// 	input[type=radio]:checked ~ label{
+	// 	  color: #0DFF92;
+	// 	}
 }
 .product-table-header {
 	display: table;
@@ -288,5 +321,23 @@
 	line-height: 1.4;
 	a {
 		color: $blue-dark;
+	}
+}
+.status {
+	&:before {
+		content: ' ';
+		position: relative;
+		display: inline-block;
+		top: -2px;
+		margin-right: 10px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: $color-primary;
+	}
+	&.status_active {
+		&:before {
+			background: $color-secondary;
+		}
 	}
 }

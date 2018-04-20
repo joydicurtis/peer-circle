@@ -1,0 +1,122 @@
+<section class="siteSection siteSection--gray">
+    <div class="container">
+        <div class="clearfix">
+            <div class="pull-right">
+            	<a href="#add-manager-form"  class="btn js-add-manager">add manager</a>
+                <a href="#"  class="btn btn-primary">save changes</a>
+            </div>
+        </div>
+        <div class="user-management-table">
+            <div class="product-table-header">
+                <div class="product-table-col">
+                    Name
+                </div>
+                <div class="product-table-col hidden-xs hidden-sm">
+                    Email
+                </div>
+                <div class="product-table-col hidden-xs hidden-sm">
+                    Status
+                </div>
+                <div class="product-table-col">
+                    Admin
+                </div>
+                <div class="product-table-col">
+                    Product Manager
+                </div>
+                <div class="product-table-col">
+                    Portfolio Manager
+                </div>
+            </div>
+            <div class="product-table">
+                <div class="product-table-row">
+                    <div class="product-table-col">
+                        Kevin Huang
+                    </div>
+                    <div class="product-table-col hidden-xs hidden-sm">
+                        khuang@abcins.com
+                    </div>
+                    <div class="product-table-col hidden-xs hidden-sm">
+                        <span class="status status_active">Active</span>
+                    </div>
+                    <div class="product-table-col">
+                        <input type="radio" name="user_management" id="admin-option" checked>
+                        <label for="admin-option"></label>
+                    </div>
+                    <div class="product-table-col">
+                        <input type="radio" name="user_management" id="product-option">
+                        <label for="product-option"></label>
+                    </div>
+                    <div class="product-table-col">
+                        <input type="radio" name="user_management" id="portfolio-option">
+                        <label for="portfolio-option"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="add-manager-form" class="mfp-hide white-popup-block sitePopUp">
+    <form action="" class="pbz_form clear-styles"
+        data-error-title="Ошибка отправки"
+        data-error-message="Попробуйте отправить заявку через некоторое время"
+        data-success-title="Спасибо за заявку"
+        data-success-message="Наш менеджер свяжется с вами в ближайшее время"
+    >
+        <button title="%title%" type="button" class="mfp-close">&#215;</button>
+        <h3>Add manager</h3>
+        <fieldset style="border:0;">
+                <div class="form">
+		            <div class="row">
+		                <div class="col-xs-12">
+		                    <div class="form-item">
+		                        <label for="cname">Name</label>
+		                        <input type="text" id="" name="" placeholder="John">
+		                    </div>
+		                </div>
+		                <div class="col-xs-12">
+		                    <div class="form-item">
+		                        <label for="cname">Last name</label>
+		                        <input type="text" id="" name="" placeholder="Dou">
+		                    </div>
+		                </div>
+		                <div class="col-xs-6">
+		                    <label for="cname">Phone number</label>
+		                    <div class="form-item">
+		                        <input type="text" id="e" name="" placeholder="800-950-1450">
+		                    </div>
+		                </div>
+		                <div class="col-xs-6">
+		                    <div class="form-item clearfix">
+		                        <label for="cname">E-mail</label>
+			                    <div class="form-item">
+			                        <input type="text" id="e" name="" placeholder="Mar****@gmail.com">
+			                    </div>
+		                    </div>
+		                </div>
+		                <div class="col-xs-12">
+		                    <div class="form-item clearfix">
+		                        <label for="cname">Rights and privileges</label>
+			                    <div class="form-item radio-item">
+			                    	<div class="row">
+			                    		<div class="col-xs-4">
+			                    		    <input type="radio" id="admin-option" name="rights">
+		                        			<label for="admin-option">Admin</label>
+		                        		</div>
+		                        		<div class="col-xs-4">
+		                        			<input type="radio" id="product-option" name="rights">
+		                        			<label for="product-option">Product Manager</label>
+		                        		</div>
+		                        		<div class="col-xs-4">	
+		                        			<input type="radio" id="portfolio-option" name="rights">
+		                        			<label for="portfolio-option">Portfolio Manager</label>
+		                        		</div>
+			                        </div>
+			                    </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+            <div class="u-text--center"><button type="submit" class="btn btn-primary">add manager  </button></div>
+        </fieldset>
+    </form>
+</div>
