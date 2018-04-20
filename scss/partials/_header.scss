@@ -1,6 +1,8 @@
 .header {
 	padding: 13px 0;
 	box-shadow: 0 0 5px rgba(0,0,0,.2);
+	@include breakpoint(medium) {
+	}
 	.container {
 		width: auto;
 		@include breakpoint(large) {
@@ -11,6 +13,7 @@
 		}
 	}
 	.header-container {
+		position: relative;
 		width: 100%;
 		max-width: 1830px;
 		padding: 0;
@@ -434,17 +437,21 @@
 		@include breakpoint(large) {
 			display: block;
 			text-align: left;
-		    width: 70%;
+		    width: 57%;
 	    	float: left;
 		    margin-left: 16.66666%;
 	    }
 		ul {
+			top: 53px;
 			@include breakpoint(large) {
 				position: relative;
+				top: 0;
 			}
 			li {
 				display: block;
-				margin-right: 18px;
+				@include breakpoint(medium) {
+					margin-right: 18px;
+				}
 				@include breakpoint(large) {
 					display: inline-block;
 				}
@@ -512,7 +519,52 @@
 	}
 }
 .header-profile {
+	position: relative;
 	text-align: right;
+	border: solid 1px transparent;
+	@include breakpoint(large) {
+		position: absolute;
+		right: 0;
+	}
+	&:hover,
+	&:focus {
+		background: $gray-bg;
+		border: solid 1px $gray-border;
+		.profile-links {
+			display: block;
+			position: absolute;
+			top: 80px;
+			left: 0;
+			right: 0;
+			z-index: 1050;
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				background: $white;
+				box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+				li {
+					padding: 10px 20px;
+					text-align: left;
+					a {
+						color: $blue-dark;
+						font-weight: $fontWeight-bold;
+					}
+					&:hover,
+					&:focus {
+						background: $color-secondary;
+						box-shadow: 0px 3px 15px 0 #3987e4;
+						a {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+	.profile-links {
+		display: none;
+	}
 }
 .header-profile-name {
 	display: inline-block;
@@ -608,5 +660,76 @@
 	background: $gray-bg;
 	.header-logo {
 		position: relative;
+	}
+}
+.header-creating-store {
+	border-top: solid 1px $gray-border;
+	box-shadow: 0 2px 0 0 $gray-table-border;
+	padding: 20px 0;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			color: $gray-border;
+			font-weight: $fontWeight-bold;
+			&:after {
+				content: ' ';
+				display: inline-block;
+				border-bottom: dashed 1px $gray-border;
+				width: 38px;
+				margin: 0 5px;
+			    position: relative;
+			    top: -5px;
+			}
+			&:last-child {
+				&:after {
+					content: none;
+				}
+			}
+			&:before {
+				content: ' ';
+				position: relative;
+				top: 5px;
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				border: solid 1px $gray-border;
+				margin-right: 10px;
+			}
+			&.active {
+				color: $blue-dark;
+				&:before {
+					content: ' ';
+					position: relative;
+					top: 5px;
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+					background: #d3f6e5;
+					border: solid 1px $green;
+					margin-right: 10px;
+				}
+			}
+			&.done {
+				color: $blue-dark;
+				&:before {
+					content: ' ';
+					position: relative;
+					top: 5px;
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+					background: url('../images/success-icon.png') no-repeat;
+					border: solid 1px transparent;
+					margin-right: 10px;
+				}
+			}
+		}
 	}
 }

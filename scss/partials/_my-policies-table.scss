@@ -75,6 +75,14 @@
 			}
 		}
 	}
+	&.force-display {
+		.product-table-header,
+		.product-table-row {
+			.product-table-col {
+				width: 14.28571%!important;
+			}
+		}
+	}
 }
 .product-table-img {
 	float: left;

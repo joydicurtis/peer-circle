@@ -1,0 +1,40 @@
+.nav-tabs {
+	border: none;
+	>li {
+		width: 50%;
+		margin-bottom: 10px;
+		@include breakpoint(medium) {
+			width: 100%;
+		}
+		&.active {
+			>a {
+				color: $color-secondary;
+				border: none;
+				&:hover,
+				&:focus {
+					color: $color-secondary;
+					border: none;
+				}
+			}
+		}
+		>a {
+			color: $blue-dark;
+			font-weight: $fontWeight-bold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: $fontSize-xxsmall;
+			background: $white;
+			border: none;
+			box-shadow: 0 2px 0 0 $gray-table-border;
+			margin-right: 10px;
+			border-radius: 10px;
+			padding: 30px 40px;
+			@include breakpoint(medium) {
+				padding: 30px;
+			}
+			@include breakpoint(large) {
+				padding: 30px 40px;
+			}
+		}
+	}
+}

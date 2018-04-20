@@ -1,0 +1,40 @@
+.risk-management-table {
+	.product-table-header,
+	.product-table-row {
+		.product-table-col {
+			width: 25%;
+			padding: 0 5px;
+			&:nth-child(1) {
+				width: 40%;
+				@include breakpoint(medium) {
+					width: 30%;
+				}
+			}
+			&:nth-child(2) {
+				width: 30%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+			}
+			&:nth-child(3) {
+				width: 30%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+			}
+			&:nth-child(4) {
+				@include breakpoint(medium) {
+					width: 30%;
+				}
+			}
+		}
+	}
+	&.force-display {
+		.product-table-header,
+		.product-table-row {
+			.product-table-col {
+				width: 25%!important;
+			}
+		}
+	}
+}

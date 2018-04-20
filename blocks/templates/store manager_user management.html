@@ -1,0 +1,261 @@
+<html lang="en-US">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+        <title></title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/application.css">
+    </head>
+<body>
+
+
+<div class="siteContent">
+<header class="header header-admin">
+    <div class="container header-container">
+            <div class="col-sm-12 col-md-2">
+                <div class="header-logo">
+                    <img src="../../images/logo.svg">
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-9 col-lg-7 col-lg-7 col-lg-offset-2 col-md-offset-2">
+                <nav class="header-nav">
+                    <a href="#" class="header-nav-mobButton js-toggle" aria-label="Open Navigation" data-toggle=".header-nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </nav>
+                <div class="header-title hidden-xs">My requests</div>
+            </div>
+                <nav class="header-nav header-menu clearfix">
+                    <ul>
+                        <li class="active"><a href="#">personal data</a></li>
+                        <li><a href="#">my policies</a></li>
+                        <li><a href="#">my claims</a></li>
+                        <li><a href="#">My circles</a></li>
+                        <li><a href="#">my referral</a></li>
+                        <li><a href="#">my invitations </a></li>
+                        <li class="header-nav-action"><a href="#" class="btn btn-secondary btn-login">my profile</a></li>                      
+                    </ul>
+                </nav>
+                <div class="col-sm-8 col-md-1 col-lg-3 hidden-xs">
+                <div class="header-profile">
+                    <div class="header-profile-name hidden-sm hidden-md">
+                        <a href="#">Margaret Mead</a>
+                    </div>
+                    <div class="header-profile-userpic">
+                        <a href="#"><img src="../../images/userpic.png"></a>
+                    </div>
+                    <div class="header-profile-link">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-creating-store">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-md-offset-3">
+                        <ul>
+                            <li class="done">Basic information</li>
+                            <li class="active">Policy builder</li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+</header>
+    <main>
+<section class="siteSection siteSection--gray">
+    <div class="container">
+        <div class="clearfix">
+            <div class="pull-right">
+            	<a href="#add-manager-form"  class="btn js-add-manager">add manager</a>
+                <a href="#"  class="btn btn-primary">save changes</a>
+            </div>
+        </div>
+        <div class="user-management-table">
+            <div class="product-table-header">
+                <div class="product-table-col">
+                    Name
+                </div>
+                <div class="product-table-col hidden-xs hidden-sm">
+                    Email
+                </div>
+                <div class="product-table-col hidden-xs hidden-sm">
+                    Status
+                </div>
+                <div class="product-table-col">
+                    Admin
+                </div>
+                <div class="product-table-col">
+                    Product Manager
+                </div>
+                <div class="product-table-col">
+                    Portfolio Manager
+                </div>
+            </div>
+            <div class="product-table">
+                <div class="product-table-row">
+                    <div class="product-table-col">
+                        Kevin Huang
+                    </div>
+                    <div class="product-table-col hidden-xs hidden-sm">
+                        khuang@abcins.com
+                    </div>
+                    <div class="product-table-col hidden-xs hidden-sm">
+                        <span class="status status_active">Active</span>
+                    </div>
+                    <div class="product-table-col">
+                        <input type="radio" name="user_management" id="admin-option" checked>
+                        <label for="admin-option"></label>
+                    </div>
+                    <div class="product-table-col">
+                        <input type="radio" name="user_management" id="product-option">
+                        <label for="product-option"></label>
+                    </div>
+                    <div class="product-table-col">
+                        <input type="radio" name="user_management" id="portfolio-option">
+                        <label for="portfolio-option"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="add-manager-form" class="mfp-hide white-popup-block sitePopUp">
+    <form action="" class="pbz_form clear-styles"
+        data-error-title="Ошибка отправки"
+        data-error-message="Попробуйте отправить заявку через некоторое время"
+        data-success-title="Спасибо за заявку"
+        data-success-message="Наш менеджер свяжется с вами в ближайшее время"
+    >
+        <button title="%title%" type="button" class="mfp-close">&#215;</button>
+        <h3>Add manager</h3>
+        <fieldset style="border:0;">
+                <div class="form">
+		            <div class="row">
+		                <div class="col-xs-12">
+		                    <div class="form-item">
+		                        <label for="cname">Name</label>
+		                        <input type="text" id="" name="" placeholder="John">
+		                    </div>
+		                </div>
+		                <div class="col-xs-12">
+		                    <div class="form-item">
+		                        <label for="cname">Last name</label>
+		                        <input type="text" id="" name="" placeholder="Dou">
+		                    </div>
+		                </div>
+		                <div class="col-xs-6">
+		                    <label for="cname">Phone number</label>
+		                    <div class="form-item">
+		                        <input type="text" id="e" name="" placeholder="800-950-1450">
+		                    </div>
+		                </div>
+		                <div class="col-xs-6">
+		                    <div class="form-item clearfix">
+		                        <label for="cname">E-mail</label>
+			                    <div class="form-item">
+			                        <input type="text" id="e" name="" placeholder="Mar****@gmail.com">
+			                    </div>
+		                    </div>
+		                </div>
+		                <div class="col-xs-12">
+		                    <div class="form-item clearfix">
+		                        <label for="cname">Rights and privileges</label>
+			                    <div class="form-item radio-item">
+			                    	<div class="row">
+			                    		<div class="col-xs-4">
+			                    		    <input type="radio" id="admin-option" name="rights">
+		                        			<label for="admin-option">Admin</label>
+		                        		</div>
+		                        		<div class="col-xs-4">
+		                        			<input type="radio" id="product-option" name="rights">
+		                        			<label for="product-option">Product Manager</label>
+		                        		</div>
+		                        		<div class="col-xs-4">	
+		                        			<input type="radio" id="portfolio-option" name="rights">
+		                        			<label for="portfolio-option">Portfolio Manager</label>
+		                        		</div>
+			                        </div>
+			                    </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+            <div class="u-text--center"><button type="submit" class="btn btn-primary">add manager  </button></div>
+        </fieldset>
+    </form>
+</div>
+</main>
+</div>
+    <footer class="footer">
+        <div class="footer-search">
+            <div class="container">
+                <input type="search" placeholder="placeholder">
+                <label>For example, <span>CAR INSURANCE, POLICY</span></label>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 hidden-xs hidden-sm">
+                        <div class="footer__title">
+                            Main
+                        </div>
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about us</a></li>
+                                <li><a href="#">blog </a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footer__title">
+                            Insurance
+                        </div>
+                        <div class="footer__text">
+                            <ul>
+                                <li><a href="#">General Liability Insurance (CGL)</a></li>
+                                <li><a href="#">Errors and Omissions Insurance (E&O)</a></li>
+                                <li><a href="#">Professional Liability Insurance</a></li>
+                                <li><a href="#">Directors and Officers Insurance (D&O)</a></li>
+                                <li><a href="#">Cyber Liability Insurance</a></li>
+                                <li><a href="#">Contents and Property Insurance</a></li>
+                                <li><a href="#">Commercial Vehicle Insurance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="footer__title">
+                            Contact
+                        </div>
+                        <div class="footer__contact">
+                            sales@peercircle.com
+                            Quebek, 32 street, 56
+                        </div>
+                        <div class="footer__contact">
+                            9476 97847 8465 34
+                        </div>
+                        <img src="../../images/logo-white.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/vendor/jquery-3.1.0.min.js"></script>
+    <script src="../../js/vendor.min.js"></script>
+    <script src="../../js/app.min.js"></script>
+
+    </body>
+</html>

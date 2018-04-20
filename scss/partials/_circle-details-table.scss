@@ -5,17 +5,21 @@
 			width: 33.33333%;
 			padding: 0 5px;
 			&:nth-child(1) {
-				width: 13.11111%;
+				width: 33.11111%;
 			}
 			&:nth-child(2) {
-				width: 27.22222%;
-				font-weight: $fontWeight-bold;
-			}
-			&:nth-child(3) {
 				width: 38.33333%;
 			}
-			&:nth-child(4) {
+			&:nth-child(3) {
 				width: 21.33333%;
+			}
+		}
+	}
+	&.force-display {
+		.product-table-header,
+		.product-table-row {
+			.product-table-col {
+				width: 33.33333%!important;
 			}
 		}
 	}

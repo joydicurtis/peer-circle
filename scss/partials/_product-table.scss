@@ -1,13 +1,9 @@
 .product-table-container {
-	@include breakpoint(xlarge) {
-		overflow-x: auto;
-		max-width: 1160px;
-		width: 100%;
-	}
+	overflow-x: auto;
+	max-width: 1160px;
+	width: 100%;
 	.product-table-header {
-		@include breakpoint(xlarge) {
-			width: 1500px;
-		}
+		width: 1500px;
 	}
 	.product-table-row {
 		display: table;
@@ -55,11 +51,45 @@
 			}	
 		}
 	}
+	input[type=radio] {
+		display: none;
+		+label {
+			&:before {
+				content: ' ';
+				display: inline-block;
+				width: 23px;
+				height: 23px;
+				background: none;
+				border-radius: 50%;
+				border: solid 1px $gray-border;
+			}
+		}
+		&:checked {
+			+label {
+				&:before {
+					border: solid 1px transparent;
+					background: url('../images/success-icon.png') no-repeat;
+				}
+			}
+		}
+	}
+	// input[type=radio]:checked ~ .check {
+	// 	  border: 5px solid #0DFF92;
+	// 	}
+
+	// 	input[type=radio]:checked ~ .check::before{
+	// 	  background: #0DFF92;
+	// 	}
+
+	// 	input[type=radio]:checked ~ label{
+	// 	  color: #0DFF92;
+	// 	}
 }
 .product-table-header {
 	display: table;
 	padding: 0 10px;
 	width: 100%;
+	margin-top: 30px;
 	@include breakpoint(medium) {
 		padding: 0 20px;
 	}
@@ -69,71 +99,17 @@
 	.product-table-col {
 		display: inline-block;
 		font-size: $fontSize-xxsmall;
-		width: 33.33333%;
 		vertical-align: middle;
 		padding: 5px;
 		color: $gray-text;
 		font-weight: $fontWeight-bold;
 		@include breakpoint(medium) {
 			font-size: $fontSize-small;
-			width: 20%;
 			vertical-align: top;
 		}
 		@include breakpoint(medium) {
 			font-size: $fontSize-small;
-			width: 16.66666%;
 			vertical-align: top;
-		}
-		@include breakpoint(xlarge) {
-			width: 14.28571%;
-		}
-		&:nth-child(3) {
-			width: 30%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		}
-		&:nth-child(5) {
-			width: 33.33333%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		}
-		&:nth-child(6) {
-			width: 30%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		}
-		&:nth-child(7) {
-			width: 6.33333%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
 		}
 	}
 }
@@ -152,72 +128,7 @@
 		vertical-align: middle;
 		padding: 5px;
 		@include breakpoint(medium) {
-			width: 20%;
 			vertical-align: top;
-		}
-		@include breakpoint(large) {
-			width: 16.66666%;
-			}		@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		&:nth-child(1) {
-			@include breakpoint(medium) {
-				font-weight: $fontWeight-bold;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		}
-		&:nth-child(3) {
-			width: 30%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		}
-		&:nth-child(5) {
-			width: 33.33333%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		}
-		&:nth-child(6) {
-			width: 30%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
-		}
-		&:nth-child(7) {
-			width: 6.33333%;
-			@include breakpoint(medium) {
-				width: 20%;
-			}
-			@include breakpoint(large) {
-				width: 16.66666%;
-			}
-			@include breakpoint(xlarge) {
-				width: 14.28571%;
-			}
 		}
 	}
 }
@@ -288,5 +199,96 @@
 	line-height: 1.4;
 	a {
 		color: $blue-dark;
+	}
+}
+.status {
+	&:before {
+		content: ' ';
+		position: relative;
+		display: inline-block;
+		top: -2px;
+		margin-right: 10px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: $color-primary;
+	}
+	&.status_active {
+		&:before {
+			background: $color-secondary;
+		}
+	}
+}
+.product-table-main {
+	.product-table-header,
+	.product-table-row {
+		.product-table-col {
+			width: 33.33333%;
+			@include breakpoint(medium) {
+				width: 20%;
+			}
+			@include breakpoint(medium) {
+				width: 16.66666%;
+			}
+			@include breakpoint(xlarge) {
+				width: 14.28571%;
+			}
+			&:nth-child(3) {
+				width: 30%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 16.66666%;
+				}
+				@include breakpoint(xlarge) {
+					width: 14.28571%;
+				}
+			}
+			&:nth-child(5) {
+				width: 33.33333%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 16.66666%;
+				}
+				@include breakpoint(xlarge) {
+					width: 14.28571%;
+				}
+			}
+			&:nth-child(6) {
+				width: 30%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 16.66666%;
+				}
+				@include breakpoint(xlarge) {
+					width: 14.28571%;
+				}
+			}
+			&:nth-child(7) {
+				width: 6.33333%;
+				@include breakpoint(medium) {
+					width: 20%;
+				}
+				@include breakpoint(large) {
+					width: 16.66666%;
+				}
+				@include breakpoint(xlarge) {
+					width: 14.28571%;
+				}
+			}
+		}
+	}		
+	&.force-display {
+		.product-table-header,
+		.product-table-row {
+			.product-table-col {
+				width: 14.28571%!important;
+			}
+		}
 	}
 }

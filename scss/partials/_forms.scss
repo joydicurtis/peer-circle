@@ -167,6 +167,38 @@ input[type="submit"],
                 font-size: $fontSize-xxsmall;
             }
         }
+        .radio-item {
+            input[type=radio] {
+                display: none;
+                +label {
+                    &:before {
+                        content: ' ';
+                        display: inline-block;
+                        position: relative;
+                        width: 23px;
+                        height: 23px;
+                        background: none;
+                        border-radius: 50%;
+                        border: solid 1px $gray-border;
+                        top: 5px;
+                        margin-right: 10px;
+                    }
+                }
+                &:checked {
+                    +label {
+                        &:before {
+                            border: solid 1px transparent;
+                            background: url('../images/success-icon.png') no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+        .error-message {
+            color: $red;
+            text-align: right;
+            margin: 5px 0;
+        }
     }
     label {
         color: $gray-text;
@@ -210,6 +242,27 @@ input[type="submit"],
             font-weight: $fontWeight-bold;
             color: $gray-text;
         }
+    }
+    .error {
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="search"],
+        textarea,
+        select {
+            color: $red;
+            font-weight: $fontWeight-bold;
+            box-shadow: 0 2px 0 0 $red;
+            &:focus {
+                 box-shadow: 0 2px 0 0 $red;
+            }
+            &.error {
+                 box-shadow: 0 2px 0 0 $red;
+            }
+            &::placeholder {
+                color: $red;
+            }
+        }        
     }
 }
 div.wpcf7-response-output {
@@ -365,11 +418,11 @@ i {
         border: solid 1px $gray-table-border; 
     }
 }
-.select2-white {
-    .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, 
-    .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple,
-    .select2-container--default.select2-container--focus .select2-selection--multiple {
-        background: red;
+.js-select2.select2-white {
+    +.select2-container--default {
+        .select2-selection--multiple {
+            background: $white;
+        }
     }
 }
 .irs-with-grid {
@@ -764,4 +817,21 @@ label.register-switch-label {
             outline: none;
         }
     }
+}
+.add-field {
+    text-align: center;
+    color: $gray-text;
+    padding: 220px 0;
+}
+.add-field-img {
+    margin-bottom: 30px;
+}
+.add-field-title {
+    font-family: $font-second;
+    font-size: $fontSize-largest;
+    margin-bottom: 15px;
+}
+.add-field-text {
+    font-size: $fontSize-small;
+    margin-bottom: 20px;
 }
