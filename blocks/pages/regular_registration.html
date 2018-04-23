@@ -43,7 +43,7 @@
             <div class="form">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="form-item">
+                        <div class="form-item form-item_success">
                             <label for="cname">Password</label>
                             <input type="password" name="" placeholder="">
                         </div>
@@ -51,18 +51,24 @@
                     <div class="col-xs-6">
                         <div class="pass-strength">
                             <ul>
-                                <li></li>
+                                <li class="passed"></li>
+                                <li class="passed"></li>
+                                <li class="passed_not"></li>
                             </ul>
                         </div>
                     </div>
-                    <ul>
-                        <li>A digit must occur at least once</li>
-                        <li>A lower case letter must occur at least once</li>
-                        <li>An upper case letter must occur at least once</li>
-                        <li>Special character must occur at least once</li>
-                        <li>No whitespace allowed in the entire string</li>
-                        <li>At least 6 characters</li>
-                    </ul>
+                </div>
+                <div class="clearfix">
+                    <div class="pass-strength-list">
+                        <ul>
+                            <li>A digit must occur at least once</li>
+                            <li>A lower case letter must occur at least once</li>
+                            <li class="pass-strength-list_gray">An upper case letter must occur at least once</li>
+                            <li>Special character must occur at least once</li>
+                            <li>No whitespace allowed in the entire string</li>
+                            <li>At least 6 characters</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6">

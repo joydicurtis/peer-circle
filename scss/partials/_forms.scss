@@ -28,7 +28,7 @@ input[type="submit"],
 .btn {
     display: inline-block;
     margin: 12px 0;
-    padding: 18px 50px 14px;
+    padding: 18px 40px 14px;
     text-align: center;
     text-decoration: none;
     font-family: $font-second;
@@ -85,6 +85,13 @@ input[type="submit"],
         border: solid 2px transparent;
         color: $color-primary-hover;
     }
+}
+.btn--noMar {
+    margin: 12px 0;
+    @include breakpoint(medium) {
+        margin: 0;
+    }
+    
 }
 .btn-default-blue {
     background-color: transparent;
@@ -199,6 +206,27 @@ input[type="submit"],
             text-align: right;
             margin: 5px 0;
         }
+        &.error {
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="search"],
+            textarea,
+            select {
+                color: $red;
+                font-weight: $fontWeight-bold;
+                box-shadow: 0 2px 0 0 $red;
+                &:focus {
+                     box-shadow: 0 2px 0 0 $red;
+                }
+                &.error {
+                     box-shadow: 0 2px 0 0 $red;
+                }
+                &::placeholder {
+                    color: $red;
+                }
+            }        
+        }
     }
     label {
         color: $gray-text;
@@ -234,35 +262,12 @@ input[type="submit"],
             font-weight: $fontWeight-normal;
             color: $gray-text;
         }
-        &.error {
-             box-shadow: 0 2px 0 0 $red;
-        }
+        
         &::placeholder {
             color: $blue-dark;
             font-weight: $fontWeight-bold;
             color: $gray-text;
         }
-    }
-    .error {
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="search"],
-        textarea,
-        select {
-            color: $red;
-            font-weight: $fontWeight-bold;
-            box-shadow: 0 2px 0 0 $red;
-            &:focus {
-                 box-shadow: 0 2px 0 0 $red;
-            }
-            &.error {
-                 box-shadow: 0 2px 0 0 $red;
-            }
-            &::placeholder {
-                color: $red;
-            }
-        }        
     }
 }
 div.wpcf7-response-output {
@@ -834,4 +839,57 @@ label.register-switch-label {
 .add-field-text {
     font-size: $fontSize-small;
     margin-bottom: 20px;
+}
+.pass-strength {
+    position: relative;
+    top: 40px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+                width: 30%;
+            height: 9px;
+            border-radius: 5px;
+            &.passed {
+                
+                background: $green;
+                
+            }
+            &.passed_not {
+                background: $gray-border;
+            }
+        }
+    }
+}
+.pass-strength-list {
+    position: relative;
+    margin-bottom: 24px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            position: relative;
+            padding-left: 20px;
+            &:before {
+                content: ' ';
+                display: block;
+                background: $green;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                position: absolute;
+                top: 12px;
+                left: 0;
+            }
+            &.pass-strength-list_gray {
+                color: $gray-text;
+                &:before {
+                    background: $gray-text;
+                }
+            }
+        }
+    }
 }

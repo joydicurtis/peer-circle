@@ -222,6 +222,9 @@
 .product-table-main {
 	.product-table-header,
 	.product-table-row {
+		.product-table-img {
+			margin-right: 10px;
+		}
 		.product-table-col {
 			width: 33.33333%;
 			@include breakpoint(medium) {
