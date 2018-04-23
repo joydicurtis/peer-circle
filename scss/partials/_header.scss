@@ -17,6 +17,7 @@
 		width: 100%;
 		max-width: 1830px;
 		padding: 0;
+		margin-bottom: 10px;
 	}
 	.btn {
 		margin: 5px 0;
@@ -229,7 +230,7 @@
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
-    top: 10px;
+    top: 7px;
     overflow: hidden;
     @include breakpoint(large) {
     	display: none;
@@ -394,7 +395,52 @@
 	}
 }
 .header-admin {
+	position: relative;
 	border-bottom: solid 1px $gray-table-border;
+	padding: 0;
+	.header-container {
+		margin-bottom: 0;
+	}
+	.header-admin-logo {
+		position: absolute;
+		right: 0;
+		top: 15px;
+		@include breakpoint(medium) {
+			left: 50%;
+			right: auto;
+			margin-left: -73px;
+		}
+		@include breakpoint(large) {
+			position: relative;
+			left: 0;
+			margin-left: 0;
+		}
+	}
+	.header-admin-nav {
+		padding: 15px 0;
+		@include breakpoint(medium) {
+			position: absolute;
+			right: 0;
+			left: 0;
+			padding: 0;
+		}
+		@include breakpoint(large) {
+			position: relative;
+		}
+	}
+	.header-admin-profile {
+		padding: 0;
+		display: inline-block;
+		@include breakpoint(medium) { 
+			display: inline-block;
+			float: right;
+			position: relative;
+			right: 15px;
+		}
+	}
+	.header-nav-mobButton {
+		margin: 0 15px;
+	}
 	.header-nav {
 		float: left;
 		margin-right: 15px;
@@ -408,18 +454,21 @@
 	.header-logo {
 		text-align: center;
 		margin: 0 auto;
-		@include breakpoint(medium) {	
-			padding: 15px 0;
-		}
 		@include breakpoint(large) {
 			text-align: left;
 			margin: 0;
 		}
 	}
 	.header-title {
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		top: 5px;
 		font-family: $font-second;
 		font-size: $fontSize-large;
-		padding: 20px 0;
+		@include breakpoint(medium) {
+			top: 20px;
+		}
 		@include breakpoint(large) {
 			display: none;
 		}
@@ -437,12 +486,15 @@
 		@include breakpoint(large) {
 			display: block;
 			text-align: left;
-		    width: 57%;
+		    width: auto;
 	    	float: left;
 		    margin-left: 16.66666%;
 	    }
 		ul {
-			top: 53px;
+			top: 10px;
+			@include breakpoint(medium) {
+				top: 18px;
+			}
 			@include breakpoint(large) {
 				position: relative;
 				top: 0;
@@ -521,19 +573,26 @@
 .header-profile {
 	position: relative;
 	text-align: right;
-	border: solid 1px transparent;
+	border-left: solid 1px transparent;
+	border-right: solid 1px transparent;
+	padding: 0 10px;
+	min-width: 150px;
 	@include breakpoint(large) {
 		position: absolute;
-		right: 0;
+		right: 10px;
+	}
+	@include breakpoint(xlarge) {
+		min-width: 300px;
 	}
 	&:hover,
 	&:focus {
 		background: $gray-bg;
-		border: solid 1px $gray-border;
+		border-left: solid 1px $gray-border;
+		border-right: solid 1px $gray-border;
 		.profile-links {
 			display: block;
 			position: absolute;
-			top: 80px;
+			top: 68px;
 			left: 0;
 			right: 0;
 			z-index: 1050;
@@ -575,6 +634,10 @@
 	}
 	a {
 		color: $blue-dark;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 }
 .header-profile-userpic {
@@ -658,6 +721,7 @@
 }
 .header-registration {
 	background: $gray-bg;
+	padding: 15px 15px 30px;
 	.header-logo {
 		position: relative;
 	}
@@ -666,6 +730,7 @@
 	border-top: solid 1px $gray-border;
 	box-shadow: 0 2px 0 0 $gray-table-border;
 	padding: 20px 0;
+	font-size: $fontSize-small;
 	ul {
 		list-style: none;
 		margin: 0;
