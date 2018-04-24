@@ -33,7 +33,6 @@
 	width: 100%;
 	border-radius: 10px;
 	background: $white;
-	padding: 10px;
 	color: $blue-dark;
 	box-shadow: 0 2px 0 $gray-border;
 	margin-bottom: 10px;
@@ -89,15 +88,13 @@
 	display: table;
 	width: 100%;
 	margin-top: 30px;
-	@include breakpoint(medium) {
-		padding: 10px 20px;
-	}
+	padding: 10px 20px;
 	@include breakpoint(medium) {
 		padding: 10px 30px;
 	}
 	.product-table-col {
 		display: inline-block;
-		font-size: $fontSize-xxsmall;
+		font-size: $fontSize-xsmall;
 		vertical-align: middle;
 		color: $gray-text;
 		font-weight: $fontWeight-bold;
@@ -109,11 +106,15 @@
 			font-size: $fontSize-small;
 			vertical-align: top;
 		}
+		&:last-child {
+			text-align: right;
+		}
 	}
 }
 .product-table-row {
 	display: table;
 	width: 100%;
+	padding: 10px 20px;
 	@include breakpoint(medium) {
 		padding: 20px;
 	}
@@ -127,6 +128,9 @@
 		padding: 5px;
 		@include breakpoint(medium) {
 			vertical-align: top;
+		}
+		&:last-child {
+			text-align: right;
 		}
 	}
 }
@@ -260,6 +264,7 @@
 			}
 			&:nth-child(6) {
 				width: 30%;
+				text-align: right;
 				@include breakpoint(medium) {
 					width: 20%;
 				}

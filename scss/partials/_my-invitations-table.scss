@@ -45,13 +45,24 @@
 			}
 			&:nth-child(5) {
 				font-weight: $fontWeight-bold;
-				width: 40%;
+				width: 20%;
 				text-align: right;
 				@include breakpoint(medium) {
-					width: 30%;
+					width: 15%;
 				}
 				@include breakpoint(large) {
-					width: 20%;
+					width: 10%;
+				}
+			}
+			&:nth-child(6) {
+				font-weight: $fontWeight-bold;
+				width: 20%;
+				text-align: right;
+				@include breakpoint(medium) {
+					width: 15%;
+				}
+				@include breakpoint(large) {
+					width: 10%;
 				}
 			}
 		}

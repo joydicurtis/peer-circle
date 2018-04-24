@@ -12,6 +12,7 @@ textarea {
     border-radius: 0;
     -webkit-appearance: none;
     &:focus {
+        outline: none;
     }
     &::placeholder {
 
