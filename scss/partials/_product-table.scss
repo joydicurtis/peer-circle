@@ -7,7 +7,7 @@
 	}
 	.product-table-row {
 		display: table;
-		width: 100%;
+		width: 1500px;
 		@include breakpoint(medium) {
 			padding: 20px;
 		}
@@ -289,6 +289,18 @@
 		.product-table-row {
 			.product-table-col {
 				width: 14.28571%!important;
+			}
+		}
+	}
+}
+.force-display {
+	.product-table-header,
+	.product-table-row {
+		.product-table-col {
+			&.hidden-xs,
+			&.hidden-sm,
+			&.hidden-lg {
+				display: inline-block!important;
 			}
 		}
 	}
