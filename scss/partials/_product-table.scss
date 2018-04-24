@@ -87,20 +87,18 @@
 }
 .product-table-header {
 	display: table;
-	padding: 0 10px;
 	width: 100%;
 	margin-top: 30px;
 	@include breakpoint(medium) {
-		padding: 0 20px;
+		padding: 10px 20px;
 	}
 	@include breakpoint(medium) {
-		padding: 0 30px;
+		padding: 10px 30px;
 	}
 	.product-table-col {
 		display: inline-block;
 		font-size: $fontSize-xxsmall;
 		vertical-align: middle;
-		padding: 5px;
 		color: $gray-text;
 		font-weight: $fontWeight-bold;
 		@include breakpoint(medium) {
